@@ -1,0 +1,885 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <NonVisualComponents>
+    <Component class="javax.swing.ButtonGroup" name="Gb_Form">
+    </Component>
+  </NonVisualComponents>
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="3"/>
+    <Property name="name" type="java.lang.String" value="C&#xe1;lculo Financeiro" noResource="true"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
+  </SyntheticProperties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Component id="P_Cont" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                              <Component id="B_Fech" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="P_Form" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <Component id="L_Desc" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Component id="L_DescR" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="L_Paga" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Component id="L_PagaR" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="B_Calc" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="B_Limp" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="100" max="-2" attributes="0"/>
+                      <Component id="B_Sub" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="L_Sub" min="-2" pref="120" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="L_SubR" min="-2" pref="98" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Component id="P_Cont" max="32767" attributes="0"/>
+                      <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <Component id="P_Form" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="L_Desc" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="L_DescR" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="L_Paga" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="L_PagaR" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="B_Calc" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="B_Limp" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="B_Fech" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="B_Sub" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="L_Sub" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
+                  <Component id="L_SubR" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Container class="javax.swing.JPanel" name="P_Cont">
+      <Properties>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+            <TitledBorder title="Controle de Vendas:">
+              <Border PropertyName="innerBorder" info="org.netbeans.modules.form.compat2.border.SoftBevelBorderInfo">
+                <BevelBorder/>
+              </Border>
+            </TitledBorder>
+          </Border>
+        </Property>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="1" attributes="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                                  <Component id="L_ContProd" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="Cb_ContCr" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="Cb_ContBe" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="Cb_ContBo" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <EmptySpace pref="68" max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="L_ContPrec" min="-2" max="-2" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="L_ContPrecCs" min="-2" max="-2" attributes="0"/>
+                                      <Component id="L_ContPrecCr" min="-2" max="-2" attributes="0"/>
+                                      <Component id="L_ContPrecBl" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="L_ContPrecP" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="L_ContPrecS" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="L_ContPrecCa" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="L_ContPrecM" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="L_ContPrecL" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="L_ContPrecJ" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="L_ContPrecBe" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="L_ContPrecCh" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="L_ContPrecBo" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                          </Group>
+                          <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="Cb_ContS" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="Cb_ContBl" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="Cb_ContP" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="Cb_ContCa" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="Cb_ContM" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="Cb_ContL" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="Cb_ContCh" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="Cb_ContJ" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="Cb_ContCs" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="Tf_ContQuanBl" min="-2" max="-2" attributes="0"/>
+                      <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="L_ContQuan" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="Tf_ContQuanCr" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="Tf_ContQuanCs" min="-2" max="-2" attributes="0"/>
+                              <Component id="Tf_ContQuanP" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="75" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="L_ContValo" min="-2" max="-2" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="L_ContValoCs" min="-2" max="-2" attributes="0"/>
+                                      <Component id="L_ContValoCr" min="-2" max="-2" attributes="0"/>
+                                      <Component id="L_ContValoB" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="L_ContValoP" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="L_ContValoS" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="L_ContValoCa" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="L_ContValoM" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="L_ContValoL" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="L_ContValoJ" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="L_ContValoBe" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="L_ContValoCh" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="L_ContValoBo" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <Component id="Tf_ContQuanS" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="Tf_ContQuanCa" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="Tf_ContQuanM" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="Tf_ContQuanL" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="Tf_ContQuanJ" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="Tf_ContQuanBe" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="Tf_ContQuanCh" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="Tf_ContQuanBo" alignment="0" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="L_ContPrec" alignment="1" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="L_ContProd" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="L_ContQuan" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="L_ContValo" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <EmptySpace type="unrelated" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="Cb_ContCr" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="L_ContPrecCr" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="Tf_ContQuanCr" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="L_ContValoCr" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="Cb_ContCs" alignment="3" max="32767" attributes="0"/>
+                      <Component id="L_ContValoCs" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="L_ContPrecCs" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="Tf_ContQuanCs" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="Cb_ContBl" alignment="3" pref="30" max="32767" attributes="0"/>
+                      <Component id="L_ContPrecBl" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="Tf_ContQuanBl" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="L_ContValoB" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="Cb_ContP" alignment="3" max="32767" attributes="0"/>
+                      <Component id="L_ContPrecP" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="Tf_ContQuanP" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="L_ContValoP" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="Cb_ContS" alignment="3" pref="27" max="32767" attributes="0"/>
+                      <Component id="L_ContPrecS" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="Tf_ContQuanS" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="L_ContValoS" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="Cb_ContCa" alignment="3" max="32767" attributes="0"/>
+                      <Component id="L_ContPrecCa" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="Tf_ContQuanCa" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="L_ContValoCa" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="Cb_ContM" alignment="3" max="32767" attributes="0"/>
+                      <Component id="L_ContPrecM" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="Tf_ContQuanM" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="L_ContValoM" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="Cb_ContL" alignment="3" max="32767" attributes="0"/>
+                      <Component id="L_ContPrecL" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="Tf_ContQuanL" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="L_ContValoL" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="Cb_ContJ" alignment="3" max="32767" attributes="0"/>
+                      <Component id="L_ContPrecJ" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="Tf_ContQuanJ" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="L_ContValoJ" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="Cb_ContBe" alignment="3" max="32767" attributes="0"/>
+                      <Component id="L_ContPrecBe" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="Tf_ContQuanBe" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="L_ContValoBe" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="Cb_ContCh" alignment="3" pref="30" max="32767" attributes="0"/>
+                      <Component id="L_ContPrecCh" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="Tf_ContQuanCh" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="L_ContValoCh" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="Tf_ContQuanBo" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="L_ContValoBo" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="L_ContPrecBo" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="Cb_ContBo" alignment="3" max="32767" attributes="0"/>
+                  </Group>
+                  <EmptySpace pref="29" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="L_ContProd">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Produto:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JCheckBox" name="Cb_ContCr">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Camisa Regata"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Cb_ContCrActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="L_ContPrec">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Pre&#xe7;o (em R$):"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="L_ContQuan">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Quantidade:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="L_ContValo">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Valor (em R$):"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="L_ContPrecCr">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="19.90"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="Tf_ContQuanCr">
+          <Properties>
+            <Property name="editable" type="boolean" value="false"/>
+            <Property name="text" type="java.lang.String" value="0"/>
+            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[50, 20]"/>
+            </Property>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="L_ContValoCr">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="0.00"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JCheckBox" name="Cb_ContCs">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Camisa Social"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Cb_ContCsActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="L_ContPrecCs">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="59.90"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="L_ContValoCs">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="0.00"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="Tf_ContQuanCs">
+          <Properties>
+            <Property name="editable" type="boolean" value="false"/>
+            <Property name="text" type="java.lang.String" value="0"/>
+            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[50, 20]"/>
+            </Property>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Tf_ContQuanCsActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JTextField" name="Tf_ContQuanBl">
+          <Properties>
+            <Property name="editable" type="boolean" value="false"/>
+            <Property name="text" type="java.lang.String" value="0"/>
+            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[50, 20]"/>
+            </Property>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="L_ContValoBo">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="0.00"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JCheckBox" name="Cb_ContBl">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Blusa"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Cb_ContBlActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="L_ContPrecBl">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="119.90"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="L_ContPrecP">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="39.90"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JCheckBox" name="Cb_ContP">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Pullover"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Cb_ContPActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="L_ContValoB">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="0.00"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="Tf_ContQuanP">
+          <Properties>
+            <Property name="editable" type="boolean" value="false"/>
+            <Property name="text" type="java.lang.String" value="0"/>
+            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[50, 20]"/>
+            </Property>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JCheckBox" name="Cb_ContS">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Sapato"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Cb_ContSActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JTextField" name="Tf_ContQuanS">
+          <Properties>
+            <Property name="editable" type="boolean" value="false"/>
+            <Property name="text" type="java.lang.String" value="0"/>
+            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[50, 20]"/>
+            </Property>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="L_ContPrecS">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="99.90"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="L_ContValoP">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="0.00"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JCheckBox" name="Cb_ContCa">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Cal&#xe7;a"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Cb_ContCaActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="L_ContPrecCa">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="38.90"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="L_ContValoS">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="0.00"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JCheckBox" name="Cb_ContM">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Meias"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Cb_ContMActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="L_ContPrecM">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="9.90"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="L_ContValoCa">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="0.00"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JCheckBox" name="Cb_ContL">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Luvas"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Cb_ContLActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="L_ContPrecL">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="24.90"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="L_ContValoM">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="0.00"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JCheckBox" name="Cb_ContBe">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Bermuda"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Cb_ContBeActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="L_ContPrecBe">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="69.90"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="L_ContValoJ">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="0.00"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JCheckBox" name="Cb_ContCh">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Chinelo"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Cb_ContChActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="L_ContPrecCh">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="14.90"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="L_ContValoBe">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="0.00"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="Tf_ContQuanCa">
+          <Properties>
+            <Property name="editable" type="boolean" value="false"/>
+            <Property name="text" type="java.lang.String" value="0"/>
+            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[50, 20]"/>
+            </Property>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="Tf_ContQuanM">
+          <Properties>
+            <Property name="editable" type="boolean" value="false"/>
+            <Property name="text" type="java.lang.String" value="0"/>
+            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[50, 20]"/>
+            </Property>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="Tf_ContQuanL">
+          <Properties>
+            <Property name="editable" type="boolean" value="false"/>
+            <Property name="text" type="java.lang.String" value="0"/>
+            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[50, 20]"/>
+            </Property>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="Tf_ContQuanBe">
+          <Properties>
+            <Property name="editable" type="boolean" value="false"/>
+            <Property name="text" type="java.lang.String" value="0"/>
+            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[50, 20]"/>
+            </Property>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="Tf_ContQuanCh">
+          <Properties>
+            <Property name="editable" type="boolean" value="false"/>
+            <Property name="text" type="java.lang.String" value="0"/>
+            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[50, 20]"/>
+            </Property>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JCheckBox" name="Cb_ContBo">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Bon&#xe9;"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Cb_ContBoActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="L_ContPrecBo">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="6.90"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="Tf_ContQuanBo">
+          <Properties>
+            <Property name="editable" type="boolean" value="false"/>
+            <Property name="text" type="java.lang.String" value="0"/>
+            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[50, 20]"/>
+            </Property>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="L_ContValoCh">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="0.00"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JCheckBox" name="Cb_ContJ">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Jaqueta"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Cb_ContJActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="L_ContPrecJ">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="329.90"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="Tf_ContQuanJ">
+          <Properties>
+            <Property name="editable" type="boolean" value="false"/>
+            <Property name="text" type="java.lang.String" value="0"/>
+            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[50, 20]"/>
+            </Property>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="L_ContValoL">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="0.00"/>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Component class="javax.swing.JButton" name="B_Sub">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.editors2.FontEditor">
+          <FontInfo relative="true">
+            <Font bold="true" component="B_Sub" property="font" relativeSize="true" size="5"/>
+          </FontInfo>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Sub-Total"/>
+        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[150, 50]"/>
+        </Property>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="B_SubActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="L_Sub">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.editors2.FontEditor">
+          <FontInfo relative="true">
+            <Font component="L_Sub" property="font" relativeSize="true" size="5"/>
+          </FontInfo>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Sub-Total: R$ "/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="L_SubR">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.editors2.FontEditor">
+          <FontInfo relative="true">
+            <Font bold="true" component="L_SubR" property="font" relativeSize="true" size="5"/>
+          </FontInfo>
+        </Property>
+        <Property name="text" type="java.lang.String" value="0.00"/>
+      </Properties>
+    </Component>
+    <Container class="javax.swing.JPanel" name="P_Form">
+      <Properties>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+            <TitledBorder title="Forma de Pagamento: ">
+              <Border PropertyName="innerBorder" info="org.netbeans.modules.form.compat2.border.SoftBevelBorderInfo">
+                <BevelBorder/>
+              </Border>
+            </TitledBorder>
+          </Border>
+        </Property>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="Rb_FormVist" alignment="0" max="32767" attributes="0"/>
+                          <Component id="Rb_FormPraz" alignment="0" max="32767" attributes="0"/>
+                          <Component id="L_FormQuan" alignment="0" max="32767" attributes="0"/>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <Component id="L_FormValo" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Component id="L_FormValoR" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Component id="Cb_FormQuan" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="Rb_FormVist" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Component id="Rb_FormPraz" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="L_FormQuan" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="Cb_FormQuan" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="L_FormValo" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="L_FormValoR" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JRadioButton" name="Rb_FormVist">
+          <Properties>
+            <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+              <ComponentRef name="Gb_Form"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="&#xc0; Vista"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Rb_FormVistActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JRadioButton" name="Rb_FormPraz">
+          <Properties>
+            <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+              <ComponentRef name="Gb_Form"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="&#xc0; Prazo"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Rb_FormPrazActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="L_FormQuan">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Quantidade de Parcelas:"/>
+            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[200, 14]"/>
+            </Property>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JComboBox" name="Cb_FormQuan">
+          <Properties>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="4">
+                <StringItem index="0" value="2"/>
+                <StringItem index="1" value="3"/>
+                <StringItem index="2" value="4"/>
+                <StringItem index="3" value="5"/>
+              </StringArray>
+            </Property>
+            <Property name="enabled" type="boolean" value="false"/>
+          </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+          </AuxValues>
+        </Component>
+        <Component class="javax.swing.JLabel" name="L_FormValo">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Valor da Parcelas: R$"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="L_FormValoR">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="0.00"/>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Component class="javax.swing.JLabel" name="L_Desc">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Total de Descontos: R$"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="L_DescR">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="0.00"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="L_Paga">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Total a Pagar: R$ "/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="L_PagaR">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="0.00"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="B_Calc">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Calcular Total"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="B_CalcActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="B_Limp">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Limpar Todos"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="B_LimpActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="B_Fech">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Fechar formul&#xe1;rio"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="B_FechActionPerformed"/>
+      </Events>
+    </Component>
+  </SubComponents>
+</Form>
