@@ -42,7 +42,6 @@ public class Frm_CalcEspe extends javax.swing.JFrame {
         B_PrimVeri = new javax.swing.JButton();
         B_PrimLimp = new javax.swing.JButton();
         L_PrimResu = new javax.swing.JLabel();
-        L_PrimResuR = new javax.swing.JLabel();
         P_Mmc = new javax.swing.JPanel();
         Tf_MmcNum1 = new javax.swing.JTextField();
         L_MmcNum1 = new javax.swing.JLabel();
@@ -119,9 +118,8 @@ public class Frm_CalcEspe extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addGroup(P_MdcLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(B_MdcVeri, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(B_MdcLimp, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
+                            .addComponent(B_MdcLimp, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         P_MdcLayout.setVerticalGroup(
             P_MdcLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -148,13 +146,16 @@ public class Frm_CalcEspe extends javax.swing.JFrame {
         L_PrimNum.setText("Número:");
 
         B_PrimVeri.setText("Verificar");
+        B_PrimVeri.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                B_PrimVeriActionPerformed(evt);
+            }
+        });
 
         B_PrimLimp.setText("Limpar");
 
         L_PrimResu.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        L_PrimResu.setText("Resultado :");
-
-        L_PrimResuR.setText("0");
+        L_PrimResu.setText("...");
 
         javax.swing.GroupLayout P_PrimLayout = new javax.swing.GroupLayout(P_Prim);
         P_Prim.setLayout(P_PrimLayout);
@@ -163,6 +164,7 @@ public class Frm_CalcEspe extends javax.swing.JFrame {
             .addGroup(P_PrimLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(P_PrimLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(L_PrimResu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(P_PrimLayout.createSequentialGroup()
                         .addComponent(L_PrimNum)
                         .addGap(18, 18, 18)
@@ -170,12 +172,9 @@ public class Frm_CalcEspe extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addGroup(P_PrimLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(B_PrimLimp, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(B_PrimVeri, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                    .addGroup(P_PrimLayout.createSequentialGroup()
-                        .addComponent(L_PrimResu, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(L_PrimResuR, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(B_PrimVeri, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(0, 15, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         P_PrimLayout.setVerticalGroup(
             P_PrimLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -188,9 +187,7 @@ public class Frm_CalcEspe extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(B_PrimLimp)
                 .addGap(18, 18, 18)
-                .addGroup(P_PrimLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(L_PrimResu)
-                    .addComponent(L_PrimResuR))
+                .addComponent(L_PrimResu)
                 .addContainerGap())
         );
 
@@ -260,13 +257,21 @@ public class Frm_CalcEspe extends javax.swing.JFrame {
         L_ParNum.setText("Número:");
 
         B_ParVeri.setText("Verificar");
+        B_ParVeri.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                B_ParVeriActionPerformed(evt);
+            }
+        });
 
         B_ParLimp.setText("Limpar");
+        B_ParLimp.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                B_ParLimpActionPerformed(evt);
+            }
+        });
 
         L_ParResu.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         L_ParResu.setText("Resultado :");
-
-        L_ParResuR.setText("0");
 
         javax.swing.GroupLayout P_ParLayout = new javax.swing.GroupLayout(P_Par);
         P_Par.setLayout(P_ParLayout);
@@ -342,24 +347,21 @@ public class Frm_CalcEspe extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(P_BhasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(P_BhasLayout.createSequentialGroup()
-                        .addGroup(P_BhasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(P_BhasLayout.createSequentialGroup()
-                                .addComponent(L_BhasNum1)
-                                .addGap(18, 18, 18)
-                                .addComponent(Tf_BhasNum1, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(B_BhasVeri, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addGroup(P_BhasLayout.createSequentialGroup()
-                                .addComponent(L_BhasNum2)
-                                .addGap(18, 18, 18)
-                                .addComponent(Tf_BhasNum2, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(B_BhasLimp, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addGroup(P_BhasLayout.createSequentialGroup()
-                                .addComponent(L_BhasNum3)
-                                .addGap(18, 18, 18)
-                                .addComponent(Tf_BhasNum3, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addContainerGap())
+                        .addComponent(L_BhasNum1)
+                        .addGap(18, 18, 18)
+                        .addComponent(Tf_BhasNum1, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(B_BhasVeri, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(P_BhasLayout.createSequentialGroup()
+                        .addComponent(L_BhasNum2)
+                        .addGap(18, 18, 18)
+                        .addComponent(Tf_BhasNum2, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(B_BhasLimp, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(P_BhasLayout.createSequentialGroup()
+                        .addComponent(L_BhasNum3)
+                        .addGap(18, 18, 18)
+                        .addComponent(Tf_BhasNum3, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(P_BhasLayout.createSequentialGroup()
                         .addComponent(L_BhasResu)
                         .addGap(18, 18, 18)
@@ -371,8 +373,8 @@ public class Frm_CalcEspe extends javax.swing.JFrame {
                         .addGroup(P_BhasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(L_BhasDeltR, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(L_BhasX1R, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(L_BhasX2R, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap())))
+                            .addComponent(L_BhasX2R, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap())
         );
         P_BhasLayout.setVerticalGroup(
             P_BhasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -461,6 +463,40 @@ public class Frm_CalcEspe extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void B_ParVeriActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B_ParVeriActionPerformed
+        // TODO add your handling code here:
+        Double num = Double.parseDouble(Tf_ParNum.getText());
+        if (num%2 == 0){
+            L_ParResu.setText("O número é : ");
+            L_ParResuR.setText("Par");
+        }
+        else{
+            L_ParResu.setText("O número é : ");
+            L_ParResuR.setText("Impar");
+        }
+    }//GEN-LAST:event_B_ParVeriActionPerformed
+
+    private void B_ParLimpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B_ParLimpActionPerformed
+        // TODO add your handling code here:
+        L_ParResuR.setText("");
+        L_ParResu.setText("Resultado :");
+        Tf_ParNum.setText("");
+        Tf_ParNum.requestFocus();
+    }//GEN-LAST:event_B_ParLimpActionPerformed
+
+    private void B_PrimVeriActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B_PrimVeriActionPerformed
+        // TODO add your handling code here:
+        double num = Double.parseDouble(Tf_PrimNum.getText());
+        for (int i = 2; i < num; i++) {
+            if (num % i == 0){
+                L_PrimResu.setText("O Número é Primo");
+            }
+            else{
+                L_PrimResu.setText("O Número não é Primo");
+            }
+        }
+    }//GEN-LAST:event_B_PrimVeriActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -532,7 +568,6 @@ public class Frm_CalcEspe extends javax.swing.JFrame {
     private javax.swing.JLabel L_ParResuR;
     private javax.swing.JLabel L_PrimNum;
     private javax.swing.JLabel L_PrimResu;
-    private javax.swing.JLabel L_PrimResuR;
     private javax.swing.JPanel P_Bhas;
     private javax.swing.JPanel P_Mdc;
     private javax.swing.JPanel P_Mmc;
