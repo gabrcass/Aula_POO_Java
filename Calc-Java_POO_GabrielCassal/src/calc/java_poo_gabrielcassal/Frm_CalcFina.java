@@ -50,7 +50,7 @@ public class Frm_CalcFina extends javax.swing.JFrame {
         L_ContPrecBl = new javax.swing.JLabel();
         L_ContPrecP = new javax.swing.JLabel();
         Cb_ContP = new javax.swing.JCheckBox();
-        L_ContValoB = new javax.swing.JLabel();
+        L_ContValoBl = new javax.swing.JLabel();
         Tf_ContQuanP = new javax.swing.JTextField();
         Cb_ContS = new javax.swing.JCheckBox();
         Tf_ContQuanS = new javax.swing.JTextField();
@@ -174,7 +174,7 @@ public class Frm_CalcFina extends javax.swing.JFrame {
             }
         });
 
-        L_ContValoB.setText("0.00");
+        L_ContValoBl.setText("0.00");
 
         Tf_ContQuanP.setEditable(false);
         Tf_ContQuanP.setText("0");
@@ -368,7 +368,7 @@ public class Frm_CalcFina extends javax.swing.JFrame {
                                 .addGroup(P_ContLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(L_ContValoCs)
                                     .addComponent(L_ContValoCr)
-                                    .addComponent(L_ContValoB)
+                                    .addComponent(L_ContValoBl)
                                     .addComponent(L_ContValoP)
                                     .addComponent(L_ContValoS)
                                     .addComponent(L_ContValoCa)
@@ -415,7 +415,7 @@ public class Frm_CalcFina extends javax.swing.JFrame {
                     .addComponent(Cb_ContBl, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
                     .addComponent(L_ContPrecBl)
                     .addComponent(Tf_ContQuanBl, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(L_ContValoB))
+                    .addComponent(L_ContValoBl))
                 .addGap(0, 0, 0)
                 .addGroup(P_ContLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Cb_ContP, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -423,7 +423,7 @@ public class Frm_CalcFina extends javax.swing.JFrame {
                     .addComponent(Tf_ContQuanP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(L_ContValoP))
                 .addGroup(P_ContLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Cb_ContS, javax.swing.GroupLayout.PREFERRED_SIZE, 27, Short.MAX_VALUE)
+                    .addComponent(Cb_ContS, javax.swing.GroupLayout.DEFAULT_SIZE, 27, Short.MAX_VALUE)
                     .addComponent(L_ContPrecS)
                     .addComponent(Tf_ContQuanS, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(L_ContValoS))
@@ -433,13 +433,13 @@ public class Frm_CalcFina extends javax.swing.JFrame {
                     .addComponent(L_ContPrecCa)
                     .addComponent(Tf_ContQuanCa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(L_ContValoCa))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(0, 0, 0)
                 .addGroup(P_ContLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Cb_ContM, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(L_ContPrecM)
                     .addComponent(Tf_ContQuanM, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(L_ContValoM))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(0, 0, 0)
                 .addGroup(P_ContLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Cb_ContL, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(L_ContPrecL)
@@ -463,13 +463,13 @@ public class Frm_CalcFina extends javax.swing.JFrame {
                     .addComponent(L_ContPrecCh)
                     .addComponent(Tf_ContQuanCh, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(L_ContValoCh))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(0, 0, 0)
                 .addGroup(P_ContLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Tf_ContQuanBo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(L_ContValoBo)
                     .addComponent(L_ContPrecBo)
                     .addComponent(Cb_ContBo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(29, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         B_Sub.setFont(B_Sub.getFont().deriveFont(B_Sub.getFont().getStyle() | java.awt.Font.BOLD, B_Sub.getFont().getSize()+5));
@@ -521,15 +521,14 @@ public class Frm_CalcFina extends javax.swing.JFrame {
             P_FormLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(P_FormLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(P_FormLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(P_FormLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(Rb_FormVist, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(Rb_FormPraz, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(L_FormQuan, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(P_FormLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(Rb_FormVist, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(Rb_FormPraz, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(L_FormQuan, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(P_FormLayout.createSequentialGroup()
                         .addComponent(L_FormValo)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(L_FormValoR)))
+                        .addComponent(L_FormValoR, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(Cb_FormQuan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
@@ -591,20 +590,19 @@ public class Frm_CalcFina extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(P_Cont, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(L_Paga)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(L_PagaR, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(L_Desc)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(L_DescR, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(10, 10, 10)
                                 .addComponent(B_Fech))
                             .addComponent(P_Form, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(L_Desc)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addComponent(L_DescR))
-                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                    .addComponent(L_Paga)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addComponent(L_PagaR)))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(B_Calc)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -616,7 +614,7 @@ public class Frm_CalcFina extends javax.swing.JFrame {
                         .addComponent(L_Sub, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(L_SubR, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap())
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -642,7 +640,7 @@ public class Frm_CalcFina extends javax.swing.JFrame {
                             .addComponent(B_Limp))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(B_Fech)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 63, Short.MAX_VALUE)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(B_Sub, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(L_Sub, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -660,6 +658,7 @@ public class Frm_CalcFina extends javax.swing.JFrame {
         }
         if (Cb_ContL.isSelected() == false ){
             Tf_ContQuanL.setEditable(false);
+            Tf_ContQuanL.setText("0");
         }
     }//GEN-LAST:event_Cb_ContLActionPerformed
 
@@ -699,7 +698,7 @@ public class Frm_CalcFina extends javax.swing.JFrame {
         if (Cb_ContBl.isSelected() == true ){
             Tf_ContQuanBl.setEditable(true);
         }
-        if (Cb_ContCr.isSelected() == false ){
+        if (Cb_ContBl.isSelected() == false ){
             Tf_ContQuanBl.setEditable(false);
             Tf_ContQuanBl.setText("0");
         }
@@ -795,24 +794,48 @@ public class Frm_CalcFina extends javax.swing.JFrame {
 
     private void B_SubActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B_SubActionPerformed
         // TODO add your handling code here:
-        Double subtotal = (Double.parseDouble(Tf_ContQuanBe.getText()) * Double.parseDouble(L_ContPrecBe.getText()))
-                +(Double.parseDouble(Tf_ContQuanBl.getText()) * Double.parseDouble(L_ContPrecBl.getText()))
-                +(Double.parseDouble(Tf_ContQuanBo.getText()) * Double.parseDouble(L_ContPrecBo.getText()))
-                +(Double.parseDouble(Tf_ContQuanCa.getText()) * Double.parseDouble(L_ContPrecCa.getText()))
-                +(Double.parseDouble(Tf_ContQuanCh.getText()) * Double.parseDouble(L_ContPrecCh.getText()))
-                +(Double.parseDouble(Tf_ContQuanCr.getText()) * Double.parseDouble(L_ContPrecCr.getText()))
-                +(Double.parseDouble(Tf_ContQuanCs.getText()) * Double.parseDouble(L_ContPrecCs.getText()))
-                +(Double.parseDouble(Tf_ContQuanJ.getText()) * Double.parseDouble(L_ContPrecJ.getText()))
-                +(Double.parseDouble(Tf_ContQuanL.getText()) * Double.parseDouble(L_ContPrecL.getText()))
-                +(Double.parseDouble(Tf_ContQuanM.getText()) * Double.parseDouble(L_ContPrecM.getText()))
-                +(Double.parseDouble(Tf_ContQuanP.getText()) * Double.parseDouble(L_ContPrecP.getText()))
-                +(Double.parseDouble(Tf_ContQuanS.getText()) * Double.parseDouble(L_ContPrecS.getText()));
+        L_ContValoBe.setText(Double.toString((Double.parseDouble(Tf_ContQuanBe.getText()) * Double.parseDouble(L_ContPrecBe.getText()))));
+        L_ContValoBl.setText(Double.toString((Double.parseDouble(Tf_ContQuanBl.getText()) * Double.parseDouble(L_ContPrecBl.getText()))));
+        L_ContValoBo.setText(Double.toString((Double.parseDouble(Tf_ContQuanBo.getText()) * Double.parseDouble(L_ContPrecBo.getText()))));
+        L_ContValoCa.setText(Double.toString((Double.parseDouble(Tf_ContQuanCa.getText()) * Double.parseDouble(L_ContPrecCa.getText()))));
+        L_ContValoCh.setText(Double.toString((Double.parseDouble(Tf_ContQuanCh.getText()) * Double.parseDouble(L_ContPrecCh.getText()))));
+        L_ContValoCr.setText(Double.toString((Double.parseDouble(Tf_ContQuanCr.getText()) * Double.parseDouble(L_ContPrecCr.getText()))));
+        L_ContValoCs.setText(Double.toString((Double.parseDouble(Tf_ContQuanCs.getText()) * Double.parseDouble(L_ContPrecCs.getText()))));
+        L_ContValoJ.setText(Double.toString((Double.parseDouble(Tf_ContQuanJ.getText()) * Double.parseDouble(L_ContPrecJ.getText()))));
+        L_ContValoL.setText(Double.toString((Double.parseDouble(Tf_ContQuanL.getText()) * Double.parseDouble(L_ContPrecL.getText()))));
+        L_ContValoM.setText(Double.toString((Double.parseDouble(Tf_ContQuanM.getText()) * Double.parseDouble(L_ContPrecM.getText()))));
+        L_ContValoP.setText(Double.toString((Double.parseDouble(Tf_ContQuanP.getText()) * Double.parseDouble(L_ContPrecP.getText()))));
+        L_ContValoS.setText(Double.toString((Double.parseDouble(Tf_ContQuanS.getText()) * Double.parseDouble(L_ContPrecS.getText()))));
+        Double subtotal = (Double.parseDouble(L_ContValoBe.getText()))
+                +(Double.parseDouble(L_ContValoBl.getText()))
+                +(Double.parseDouble(L_ContValoBo.getText()))
+                +(Double.parseDouble(L_ContValoCa.getText()))
+                +(Double.parseDouble(L_ContValoCh.getText()))
+                +(Double.parseDouble(L_ContValoCr.getText()))
+                +(Double.parseDouble(L_ContValoCs.getText()))
+                +(Double.parseDouble(L_ContValoJ.getText()))
+                +(Double.parseDouble(L_ContValoL.getText()))
+                +(Double.parseDouble(L_ContValoM.getText()))
+                +(Double.parseDouble(L_ContValoP.getText()))
+                +(Double.parseDouble(L_ContValoS.getText()));
         L_SubR.setText(Double.toString(subtotal));
     }//GEN-LAST:event_B_SubActionPerformed
 
     private void B_CalcActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B_CalcActionPerformed
         // TODO add your handling code here:
-        Double subtotal = Double.parseDouble(Tf_ContQuanBe.getText())+Double.parseDouble(Tf_ContQuanBl.getText())+Double.parseDouble(Tf_ContQuanBo.getText())+Double.parseDouble(Tf_ContQuanCa.getText())+Double.parseDouble(Tf_ContQuanCh.getText())+Double.parseDouble(Tf_ContQuanCr.getText())+Double.parseDouble(Tf_ContQuanCs.getText())+Double.parseDouble(Tf_ContQuanJ.getText())+Double.parseDouble(Tf_ContQuanL.getText())+Double.parseDouble(Tf_ContQuanM.getText())+Double.parseDouble(Tf_ContQuanP.getText())+Double.parseDouble(Tf_ContQuanS.getText());
+        String Combobox = (String) Cb_FormQuan.getSelectedItem();
+        Double subtotal = Double.parseDouble(L_ContValoBe.getText())
+                +Double.parseDouble(L_ContValoBl.getText())
+                +Double.parseDouble(L_ContValoBo.getText())
+                +Double.parseDouble(L_ContValoCa.getText())
+                +Double.parseDouble(L_ContValoCh.getText())
+                +Double.parseDouble(L_ContValoCr.getText())
+                +Double.parseDouble(L_ContValoCs.getText())
+                +Double.parseDouble(L_ContValoJ.getText())
+                +Double.parseDouble(L_ContValoL.getText())
+                +Double.parseDouble(L_ContValoM.getText())
+                +Double.parseDouble(L_ContValoP.getText())
+                +Double.parseDouble(L_ContValoS.getText());
         if (Rb_FormVist.isSelected() == true){
             Cb_FormQuan.setEnabled(false);
             double desc = subtotal*0.115;
@@ -823,10 +846,12 @@ public class Frm_CalcFina extends javax.swing.JFrame {
         }
         if (Rb_FormPraz.isSelected() == true) {
             Cb_FormQuan.setEnabled(true);
-            double total = subtotal * (100/Cb_FormQuan.getItemCount()) + (Cb_FormQuan.getItemCount());
-            L_PagaR.setText(Double.toString(total));
+            double total = (subtotal) + (Double.parseDouble(Combobox)*6.90);
+            double pagar = total + (total*0.01);
+            L_PagaR.setText(Double.toString(pagar));
             L_DescR.setText("0.00");
-            double parcela = total / Cb_FormQuan.getItemCount();
+            double parcela = total / Double.parseDouble(Combobox);
+
             L_FormValoR.setText(Double.toString(parcela));
         }
 
@@ -856,7 +881,43 @@ public class Frm_CalcFina extends javax.swing.JFrame {
         Tf_ContQuanM.setText("0");
         Tf_ContQuanP.setText("0");
         Tf_ContQuanS.setText("0");
-        
+        L_ContValoBl.setText("0");
+        L_ContValoBe.setText("0");
+        L_ContValoBo.setText("0");
+        L_ContValoCa.setText("0");
+        L_ContValoCh.setText("0");
+        L_ContValoCr.setText("0");
+        L_ContValoCs.setText("0");
+        L_ContValoJ.setText("0");
+        L_ContValoL.setText("0");
+        L_ContValoM.setText("0");
+        L_ContValoP.setText("0");
+        L_ContValoS.setText("0");
+        Cb_ContBo.setSelected(false);
+        Cb_ContBe.setSelected(false);
+        Cb_ContBl.setSelected(false);
+        Cb_ContCa.setSelected(false);
+        Cb_ContCh.setSelected(false);
+        Cb_ContCr.setSelected(false);
+        Cb_ContCs.setSelected(false);
+        Cb_ContJ.setSelected(false);
+        Cb_ContL.setSelected(false);
+        Cb_ContM.setSelected(false);
+        Cb_ContP.setSelected(false);
+        Cb_ContS.setSelected(false);
+        Tf_ContQuanBe.setEditable(false);
+        Tf_ContQuanBl.setEditable(false);
+        Tf_ContQuanBo.setEditable(false);
+        Tf_ContQuanCa.setEditable(false);
+        Tf_ContQuanCh.setEditable(false);
+        Tf_ContQuanCr.setEditable(false);
+        Tf_ContQuanCs.setEditable(false);
+        Tf_ContQuanJ.setEditable(false);
+        Tf_ContQuanL.setEditable(false);
+        Tf_ContQuanM.setEditable(false);
+        Tf_ContQuanP.setEditable(false);
+        Tf_ContQuanS.setEditable(false);
+        L_SubR.setText("0.00");
         
         
         
@@ -932,8 +993,8 @@ public class Frm_CalcFina extends javax.swing.JFrame {
     private javax.swing.JLabel L_ContProd;
     private javax.swing.JLabel L_ContQuan;
     private javax.swing.JLabel L_ContValo;
-    private javax.swing.JLabel L_ContValoB;
     private javax.swing.JLabel L_ContValoBe;
+    private javax.swing.JLabel L_ContValoBl;
     private javax.swing.JLabel L_ContValoBo;
     private javax.swing.JLabel L_ContValoCa;
     private javax.swing.JLabel L_ContValoCh;

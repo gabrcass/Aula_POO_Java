@@ -65,11 +65,11 @@
                   </Group>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="P_Grau" min="-2" max="-2" attributes="0"/>
-                  <Component id="P_Pote" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Component id="P_Pote" max="32767" attributes="0"/>
+                  <Component id="P_Grau" max="32767" attributes="0"/>
               </Group>
-              <EmptySpace max="32767" attributes="0"/>
+              <EmptySpace pref="14" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -213,10 +213,10 @@
                       <Component id="L_GrauSeno" alignment="0" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="L_GrauSenoR" min="-2" max="-2" attributes="0"/>
-                      <Component id="L_GrauCossR" min="-2" max="-2" attributes="0"/>
-                      <Component id="Tf_GrauNum" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <Component id="Tf_GrauNum" max="32767" attributes="0"/>
+                      <Component id="L_GrauCossR" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
+                      <Component id="L_GrauSenoR" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
@@ -249,7 +249,7 @@
                       <Component id="L_GrauCossR" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="L_GrauCoss" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -349,7 +349,7 @@
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="Tf_FatoNum" min="-2" max="-2" attributes="0"/>
-                      <Component id="L_FatoResuR" min="-2" max="-2" attributes="0"/>
+                      <Component id="L_FatoResuR" min="-2" pref="200" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
@@ -426,6 +426,9 @@
               <Dimension value="[100, 35]"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="B_FatoLimpActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="L_FatoResu">
           <Properties>
@@ -462,25 +465,30 @@
                       <Component id="L_MultTrip" alignment="0" min="-2" max="-2" attributes="0"/>
                       <Component id="L_MultDobr" alignment="0" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="Tf_MultNum" min="-2" max="-2" attributes="0"/>
                       <Group type="102" attributes="0">
-                          <Component id="L_MultDobrR" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="L_MultQuad" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="L_MultQuadR" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <Component id="Tf_MultNum" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Group type="102" alignment="0" attributes="0">
-                          <Component id="L_MultTripR" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="L_MultQuin" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
-                          <Component id="L_MultQuinR" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                              <Component id="L_MultDobrR" min="-2" pref="65" max="-2" attributes="0"/>
+                              <Component id="L_MultTripR" min="-2" pref="65" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <Component id="L_MultQuad" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="L_MultQuadR" min="-2" pref="65" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" attributes="0">
+                                  <Component id="L_MultQuin" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Component id="L_MultQuinR" min="-2" pref="65" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
                       </Group>
                   </Group>
-                  <EmptySpace type="separate" pref="89" max="32767" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="B_MultCalc" alignment="0" min="-2" max="-2" attributes="0"/>
                       <Component id="B_MultLimp" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -630,9 +638,9 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="103" groupAlignment="1" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <Component id="L_PoteNum" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -640,47 +648,54 @@
                       </Group>
                       <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
+                              <Group type="102" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="L_PoteCubo" min="-2" max="-2" attributes="0"/>
                                       <Component id="L_PoteQuar" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="L_PoteCubo" alignment="0" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="L_PoteQuarR" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="L_PoteCuboR" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="L_PoteQuadR" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                      <Component id="L_PoteQuarR" min="-2" pref="65" max="-2" attributes="0"/>
+                                      <Component id="L_PoteCuboR" alignment="1" min="-2" pref="65" max="-2" attributes="0"/>
+                                      <Component id="L_PoteQuadR" alignment="0" min="-2" pref="65" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <Component id="L_PoteQuad" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace max="32767" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="L_PoteRaiz" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="L_PoteSext" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="L_PoteQuin" alignment="0" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="L_PoteSextR" min="-2" max="-2" attributes="0"/>
-                              <Component id="L_PoteRaizR" min="-2" max="-2" attributes="0"/>
-                              <Component id="L_PoteQuinR" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="L_PoteQuin" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="L_PoteSext" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="L_PoteQuinR" min="-2" pref="65" max="-2" attributes="0"/>
+                                      <Component id="L_PoteSextR" min="-2" pref="65" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="L_PoteRaiz" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="L_PoteRaizR" min="-2" pref="65" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
                       </Group>
                   </Group>
-                  <EmptySpace max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="B_PoteCalc" alignment="0" min="-2" max="-2" attributes="0"/>
                       <Component id="B_PoteLimp" alignment="0" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="B_PoteCalc" alignment="0" min="-2" max="-2" attributes="0"/>
                       <Group type="103" alignment="0" groupAlignment="3" attributes="0">
@@ -688,45 +703,37 @@
                           <Component id="Tf_PoteNum" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Component id="B_PoteLimp" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="L_PoteQuin" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="L_PoteQuad" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="L_PoteQuadR" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="L_PoteQuinR" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="unrelated" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="L_PoteCubo" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="L_PoteCuboR" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="L_PoteSext" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="L_PoteSextR" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="12" pref="12" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
-                          <Group type="103" groupAlignment="1" attributes="0">
-                              <Component id="B_PoteLimp" min="-2" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="L_PoteQuadR" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="L_PoteQuad" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <EmptySpace max="32767" attributes="0"/>
+                      <Group type="102" alignment="1" attributes="0">
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="L_PoteCuboR" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="L_PoteCubo" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="32767" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="L_PoteQuarR" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="L_PoteQuarR" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Component id="L_PoteQuar" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
+                          <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
                       </Group>
-                      <Group type="102" attributes="0">
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="L_PoteQuin" alignment="1" min="-2" max="-2" attributes="0"/>
-                              <Component id="L_PoteQuinR" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="L_PoteSextR" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="L_PoteSext" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="L_PoteRaizR" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="L_PoteRaiz" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
+                      <Group type="103" alignment="0" groupAlignment="3" attributes="0">
+                          <Component id="L_PoteRaiz" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="L_PoteRaizR" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace pref="65" max="32767" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -891,9 +898,9 @@
                               <Component id="L_MediMedi" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="L_MediMediR" min="-2" max="-2" attributes="0"/>
-                              <Component id="Tf_MediNum4" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="Tf_MediNum4" max="32767" attributes="0"/>
+                              <Component id="L_MediMediR" min="-2" pref="100" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
