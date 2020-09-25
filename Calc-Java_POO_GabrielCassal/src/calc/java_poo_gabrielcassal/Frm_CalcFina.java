@@ -7,6 +7,7 @@ package calc.java_poo_gabrielcassal;
 
 import java.util.Locale;
 import javax.swing.JCheckBox;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -14,6 +15,22 @@ import javax.swing.JCheckBox;
  */
 public class Frm_CalcFina extends javax.swing.JFrame {
 
+    public void subtotal(){
+        double V_total = 
+                Double.parseDouble(Tf_ContQuanBe.getText())*69.90 + 
+                Double.parseDouble(Tf_ContQuanBl.getText())*119.90 + 
+                Double.parseDouble(Tf_ContQuanBo.getText())*6.90 + 
+                Double.parseDouble(Tf_ContQuanCa.getText())*38.90 + 
+                Double.parseDouble(Tf_ContQuanCh.getText())*14.90 + 
+                Double.parseDouble(Tf_ContQuanCr.getText())*19.90 + 
+                Double.parseDouble(Tf_ContQuanCs.getText())*59.90 + 
+                Double.parseDouble(Tf_ContQuanL.getText())*24.90 + 
+                Double.parseDouble(Tf_ContQuanM.getText())*9.90 + 
+                Double.parseDouble(Tf_ContQuanP.getText())*39.90 + 
+                Double.parseDouble(Tf_ContQuanS.getText())*99.90;
+        
+        L_SubR.setText(Double.toString(V_total));
+    }
     /**
      * Creates new form Frm_CalcFina
      */
@@ -668,7 +685,10 @@ public class Frm_CalcFina extends javax.swing.JFrame {
 
     private void B_FechActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B_FechActionPerformed
         // TODO add your handling code here:
-        dispose();
+        int confirma = JOptionPane.showConfirmDialog(this, "Tem certeza ?", "Alerta",JOptionPane.YES_NO_OPTION);
+        if (confirma == 0){
+            dispose();
+        }
     }//GEN-LAST:event_B_FechActionPerformed
 
     private void Cb_ContCrActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Cb_ContCrActionPerformed
@@ -796,49 +816,13 @@ public class Frm_CalcFina extends javax.swing.JFrame {
     }//GEN-LAST:event_Cb_ContBoActionPerformed
 
     private void B_SubActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B_SubActionPerformed
-        // TODO add your handling code here:
-        L_ContValoBe.setText(Double.toString((Double.parseDouble(Tf_ContQuanBe.getText()) * Double.parseDouble(L_ContPrecBe.getText()))));
-        L_ContValoBl.setText(Double.toString((Double.parseDouble(Tf_ContQuanBl.getText()) * Double.parseDouble(L_ContPrecBl.getText()))));
-        L_ContValoBo.setText(Double.toString((Double.parseDouble(Tf_ContQuanBo.getText()) * Double.parseDouble(L_ContPrecBo.getText()))));
-        L_ContValoCa.setText(Double.toString((Double.parseDouble(Tf_ContQuanCa.getText()) * Double.parseDouble(L_ContPrecCa.getText()))));
-        L_ContValoCh.setText(Double.toString((Double.parseDouble(Tf_ContQuanCh.getText()) * Double.parseDouble(L_ContPrecCh.getText()))));
-        L_ContValoCr.setText(Double.toString((Double.parseDouble(Tf_ContQuanCr.getText()) * Double.parseDouble(L_ContPrecCr.getText()))));
-        L_ContValoCs.setText(Double.toString((Double.parseDouble(Tf_ContQuanCs.getText()) * Double.parseDouble(L_ContPrecCs.getText()))));
-        L_ContValoJ.setText(Double.toString((Double.parseDouble(Tf_ContQuanJ.getText()) * Double.parseDouble(L_ContPrecJ.getText()))));
-        L_ContValoL.setText(Double.toString((Double.parseDouble(Tf_ContQuanL.getText()) * Double.parseDouble(L_ContPrecL.getText()))));
-        L_ContValoM.setText(Double.toString((Double.parseDouble(Tf_ContQuanM.getText()) * Double.parseDouble(L_ContPrecM.getText()))));
-        L_ContValoP.setText(Double.toString((Double.parseDouble(Tf_ContQuanP.getText()) * Double.parseDouble(L_ContPrecP.getText()))));
-        L_ContValoS.setText(Double.toString((Double.parseDouble(Tf_ContQuanS.getText()) * Double.parseDouble(L_ContPrecS.getText()))));
-        Double subtotal = (Double.parseDouble(L_ContValoBe.getText()))
-                +(Double.parseDouble(L_ContValoBl.getText()))
-                +(Double.parseDouble(L_ContValoBo.getText()))
-                +(Double.parseDouble(L_ContValoCa.getText()))
-                +(Double.parseDouble(L_ContValoCh.getText()))
-                +(Double.parseDouble(L_ContValoCr.getText()))
-                +(Double.parseDouble(L_ContValoCs.getText()))
-                +(Double.parseDouble(L_ContValoJ.getText()))
-                +(Double.parseDouble(L_ContValoL.getText()))
-                +(Double.parseDouble(L_ContValoM.getText()))
-                +(Double.parseDouble(L_ContValoP.getText()))
-                +(Double.parseDouble(L_ContValoS.getText()));
-        L_SubR.setText(Double.toString(subtotal));
+        subtotal();
     }//GEN-LAST:event_B_SubActionPerformed
 
     private void B_CalcActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B_CalcActionPerformed
         // TODO add your handling code here:
         String Combobox = (String) Cb_FormQuan.getSelectedItem();
-        Double subtotal = Double.parseDouble(L_ContValoBe.getText())
-                +Double.parseDouble(L_ContValoBl.getText())
-                +Double.parseDouble(L_ContValoBo.getText())
-                +Double.parseDouble(L_ContValoCa.getText())
-                +Double.parseDouble(L_ContValoCh.getText())
-                +Double.parseDouble(L_ContValoCr.getText())
-                +Double.parseDouble(L_ContValoCs.getText())
-                +Double.parseDouble(L_ContValoJ.getText())
-                +Double.parseDouble(L_ContValoL.getText())
-                +Double.parseDouble(L_ContValoM.getText())
-                +Double.parseDouble(L_ContValoP.getText())
-                +Double.parseDouble(L_ContValoS.getText());
+        subtotal();
         if (Rb_FormVist.isSelected() == true){
             Cb_FormQuan.setEnabled(false);
             double desc = subtotal*0.115;
