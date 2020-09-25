@@ -673,22 +673,25 @@ public class Frm_CalcFina extends javax.swing.JFrame {
 
     private void Cb_ContCrActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Cb_ContCrActionPerformed
         // TODO add your handling code here:
-        if (Cb_ContCr.isSelected() == true ){
-            Tf_ContQuanCr.setEditable(true);
+        if (Cb_ContCr.isSelected() == true){
+            Tf_ContQuanCr.setEnabled(true);
+            Tf_ContQuanCr.setText("");
+            Tf_ContQuanCr.requestFocus();
         }
-        if (Cb_ContCr.isSelected() == false ){
-            Tf_ContQuanCr.setEditable(false);
+        if (Cb_ContCr.isSelected() == false){
+            Tf_ContQuanCr.setEnabled(false);
             Tf_ContQuanCr.setText("0");
         }
     }//GEN-LAST:event_Cb_ContCrActionPerformed
 
     private void Cb_ContCsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Cb_ContCsActionPerformed
-        // TODO add your handling code here:
-        if (Cb_ContCs.isSelected() == true ){
-            Tf_ContQuanCs.setEditable(true);
+        if (Cb_ContCs.isSelected() == true){
+            Tf_ContQuanCs.setEnabled(true);
+            Tf_ContQuanCs.setText("");
+            Tf_ContQuanCs.requestFocus();
         }
-        if (Cb_ContCs.isSelected() == false ){
-            Tf_ContQuanCs.setEditable(false);
+        if (Cb_ContCs.isSelected() == false){
+            Tf_ContQuanCs.setEnabled(false);
             Tf_ContQuanCs.setText("0");
         }
     }//GEN-LAST:event_Cb_ContCsActionPerformed
