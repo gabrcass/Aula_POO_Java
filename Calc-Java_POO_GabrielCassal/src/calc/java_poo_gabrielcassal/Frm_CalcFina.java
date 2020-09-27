@@ -16,18 +16,43 @@ import javax.swing.JOptionPane;
 public class Frm_CalcFina extends javax.swing.JFrame {
 
     public void subtotal(){
-        double V_total = 
-                Double.parseDouble(Tf_ContQuanBe.getText())*69.90 + 
-                Double.parseDouble(Tf_ContQuanBl.getText())*119.90 + 
-                Double.parseDouble(Tf_ContQuanBo.getText())*6.90 + 
-                Double.parseDouble(Tf_ContQuanCa.getText())*38.90 + 
-                Double.parseDouble(Tf_ContQuanCh.getText())*14.90 + 
-                Double.parseDouble(Tf_ContQuanCr.getText())*19.90 + 
-                Double.parseDouble(Tf_ContQuanCs.getText())*59.90 + 
-                Double.parseDouble(Tf_ContQuanL.getText())*24.90 + 
-                Double.parseDouble(Tf_ContQuanM.getText())*9.90 + 
-                Double.parseDouble(Tf_ContQuanP.getText())*39.90 + 
-                Double.parseDouble(Tf_ContQuanS.getText())*99.90;
+        double Be = Double.parseDouble(Tf_ContQuanBe.getText())*69.90;
+        L_ContValoBe.setText(Double.toString(Be));
+        
+        double Bl = Double.parseDouble(Tf_ContQuanBl.getText())*119.90;
+        L_ContValoBl.setText(Double.toString(Bl));
+        
+        double Bo = Double.parseDouble(Tf_ContQuanBo.getText())*6.90;
+        L_ContValoBo.setText(Double.toString(Bo));
+        
+        double Ca = Double.parseDouble(Tf_ContQuanCa.getText())*38.90;
+        L_ContValoCa.setText(Double.toString(Ca));
+        
+        double Ch = Double.parseDouble(Tf_ContQuanCh.getText())*14.90;
+        L_ContValoCh.setText(Double.toString(Ch));
+        
+        double Cr = Double.parseDouble(Tf_ContQuanCr.getText())*19.90;
+        L_ContValoCr.setText(Double.toString(Cr));
+        
+        double Cs = Double.parseDouble(Tf_ContQuanCs.getText())*59.90;
+        L_ContValoCs.setText(Double.toString(Cs));
+        
+        double L = Double.parseDouble(Tf_ContQuanL.getText())*24.90;
+        L_ContValoL.setText(Double.toString(L));
+        
+        double M = Double.parseDouble(Tf_ContQuanM.getText())*9.90;
+        L_ContValoM.setText(Double.toString(M));
+        
+        double J = Double.parseDouble(Tf_ContQuanJ.getText())*329.90;
+        L_ContValoJ.setText(Double.toString(J));
+        
+        double P = Double.parseDouble(Tf_ContQuanP.getText())*39.90;
+        L_ContValoP.setText(Double.toString(P));
+        
+        double S = Double.parseDouble(Tf_ContQuanS.getText())*99.90;
+        L_ContValoS.setText(Double.toString(S));
+        
+        double V_total = Be + Bl + Bo + Ca + Ch + Cr + Cs + L + M + P + S + J;
         
         L_SubR.setText(Double.toString(V_total));
     }
@@ -36,6 +61,7 @@ public class Frm_CalcFina extends javax.swing.JFrame {
      */
     public Frm_CalcFina() {
         initComponents();
+        Rb_FormVist.setSelected(true);
     }
 
     /**
@@ -161,11 +187,6 @@ public class Frm_CalcFina extends javax.swing.JFrame {
         Tf_ContQuanCs.setEditable(false);
         Tf_ContQuanCs.setText("0");
         Tf_ContQuanCs.setPreferredSize(new java.awt.Dimension(50, 20));
-        Tf_ContQuanCs.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Tf_ContQuanCsActionPerformed(evt);
-            }
-        });
 
         Tf_ContQuanBl.setEditable(false);
         Tf_ContQuanBl.setText("0");
@@ -324,77 +345,75 @@ public class Frm_CalcFina extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, P_ContLayout.createSequentialGroup()
                 .addGroup(P_ContLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(P_ContLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(P_ContLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(Cb_ContS, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(P_ContLayout.createSequentialGroup()
+                                .addComponent(Cb_ContBl, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, 0)
+                                .addComponent(L_ContPrecBl))
+                            .addComponent(Cb_ContP, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Cb_ContCa, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Cb_ContM, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Cb_ContL, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Cb_ContCh, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Cb_ContJ, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(P_ContLayout.createSequentialGroup()
+                                .addComponent(Cb_ContCs)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(L_ContPrecCs, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 70, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, P_ContLayout.createSequentialGroup()
                         .addGroup(P_ContLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(P_ContLayout.createSequentialGroup()
                                 .addGap(20, 20, 20)
                                 .addComponent(L_ContProd))
                             .addGroup(P_ContLayout.createSequentialGroup()
                                 .addContainerGap()
-                                .addComponent(Cb_ContCr))
+                                .addComponent(Cb_ContCr, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(P_ContLayout.createSequentialGroup()
                                 .addContainerGap()
-                                .addComponent(Cb_ContBe))
+                                .addComponent(Cb_ContBe, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(P_ContLayout.createSequentialGroup()
                                 .addContainerGap()
-                                .addComponent(Cb_ContBo)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 68, Short.MAX_VALUE)
-                        .addGroup(P_ContLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(L_ContPrec)
-                            .addGroup(P_ContLayout.createSequentialGroup()
-                                .addGap(10, 10, 10)
-                                .addGroup(P_ContLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(L_ContPrecCs)
-                                    .addComponent(L_ContPrecCr)
-                                    .addComponent(L_ContPrecBl)
-                                    .addComponent(L_ContPrecP)
-                                    .addComponent(L_ContPrecS)
-                                    .addComponent(L_ContPrecCa)
-                                    .addComponent(L_ContPrecM)
-                                    .addComponent(L_ContPrecL)
-                                    .addComponent(L_ContPrecJ)
-                                    .addComponent(L_ContPrecBe)
-                                    .addComponent(L_ContPrecCh)
-                                    .addComponent(L_ContPrecBo))))
-                        .addGap(60, 60, 60))
-                    .addGroup(P_ContLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(P_ContLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(Cb_ContS)
-                            .addComponent(Cb_ContBl)
-                            .addComponent(Cb_ContP)
-                            .addComponent(Cb_ContCa)
-                            .addComponent(Cb_ContM)
-                            .addComponent(Cb_ContL)
-                            .addComponent(Cb_ContCh)
-                            .addComponent(Cb_ContJ)
-                            .addComponent(Cb_ContCs))
+                                .addComponent(Cb_ContBo, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 0, 0)
+                        .addGroup(P_ContLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(L_ContPrec, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(L_ContPrecP)
+                            .addComponent(L_ContPrecS)
+                            .addComponent(L_ContPrecCa)
+                            .addComponent(L_ContPrecM)
+                            .addComponent(L_ContPrecL)
+                            .addComponent(L_ContPrecJ)
+                            .addComponent(L_ContPrecBe)
+                            .addComponent(L_ContPrecCh)
+                            .addComponent(L_ContPrecBo)
+                            .addComponent(L_ContPrecCr, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addGroup(P_ContLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(Tf_ContQuanBl, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(P_ContLayout.createSequentialGroup()
                         .addGroup(P_ContLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(L_ContQuan)
                             .addComponent(Tf_ContQuanCr, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(Tf_ContQuanCs, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Tf_ContQuanP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(Tf_ContQuanP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Tf_ContQuanBl, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(75, 75, 75)
-                        .addGroup(P_ContLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(L_ContValo)
-                            .addGroup(P_ContLayout.createSequentialGroup()
-                                .addGap(10, 10, 10)
-                                .addGroup(P_ContLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(L_ContValoCs)
-                                    .addComponent(L_ContValoCr)
-                                    .addComponent(L_ContValoBl)
-                                    .addComponent(L_ContValoP)
-                                    .addComponent(L_ContValoS)
-                                    .addComponent(L_ContValoCa)
-                                    .addComponent(L_ContValoM)
-                                    .addComponent(L_ContValoL)
-                                    .addComponent(L_ContValoJ)
-                                    .addComponent(L_ContValoBe)
-                                    .addComponent(L_ContValoCh)
-                                    .addComponent(L_ContValoBo)))))
+                        .addGroup(P_ContLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(L_ContValo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(L_ContValoCs, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(L_ContValoBl, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(L_ContValoP, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(L_ContValoS, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(L_ContValoCa, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(L_ContValoM, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(L_ContValoL, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(L_ContValoJ, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(L_ContValoBe, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(L_ContValoCh, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(L_ContValoBo, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(L_ContValoCr, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addComponent(Tf_ContQuanS, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Tf_ContQuanCa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Tf_ContQuanM, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -405,6 +424,11 @@ public class Frm_CalcFina extends javax.swing.JFrame {
                     .addComponent(Tf_ContQuanBo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
+
+        P_ContLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {Cb_ContBe, Cb_ContBl, Cb_ContBo, Cb_ContCa, Cb_ContCh, Cb_ContCr, Cb_ContCs, Cb_ContJ, Cb_ContL, Cb_ContM, Cb_ContP, Cb_ContS});
+
+        P_ContLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {L_ContPrecBe, L_ContPrecBl, L_ContPrecBo, L_ContPrecCa, L_ContPrecCh, L_ContPrecCr, L_ContPrecCs, L_ContPrecJ, L_ContPrecL, L_ContPrecM, L_ContPrecP, L_ContPrecS});
+
         P_ContLayout.setVerticalGroup(
             P_ContLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(P_ContLayout.createSequentialGroup()
@@ -435,7 +459,7 @@ public class Frm_CalcFina extends javax.swing.JFrame {
                     .addComponent(L_ContValoBl))
                 .addGap(0, 0, 0)
                 .addGroup(P_ContLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Cb_ContP, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(Cb_ContP)
                     .addComponent(L_ContPrecP)
                     .addComponent(Tf_ContQuanP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(L_ContValoP))
@@ -486,7 +510,7 @@ public class Frm_CalcFina extends javax.swing.JFrame {
                     .addComponent(L_ContValoBo)
                     .addComponent(L_ContPrecBo)
                     .addComponent(Cb_ContBo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         B_Sub.setFont(B_Sub.getFont().deriveFont(B_Sub.getFont().getStyle() | java.awt.Font.BOLD, B_Sub.getFont().getSize()+5));
@@ -657,7 +681,7 @@ public class Frm_CalcFina extends javax.swing.JFrame {
                             .addComponent(B_Limp))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(B_Fech)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 63, Short.MAX_VALUE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 87, Short.MAX_VALUE)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(B_Sub, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(L_Sub, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -669,19 +693,16 @@ public class Frm_CalcFina extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void Cb_ContLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Cb_ContLActionPerformed
-        // TODO add your handling code here:
-        if (Cb_ContL.isSelected() == true ){
+        if (Cb_ContL.isSelected() == true){
             Tf_ContQuanL.setEditable(true);
+            Tf_ContQuanL.setText("");
+            Tf_ContQuanL.requestFocus();
         }
-        if (Cb_ContL.isSelected() == false ){
+        if (Cb_ContL.isSelected() == false){
             Tf_ContQuanL.setEditable(false);
             Tf_ContQuanL.setText("0");
         }
     }//GEN-LAST:event_Cb_ContLActionPerformed
-
-    private void Tf_ContQuanCsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Tf_ContQuanCsActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Tf_ContQuanCsActionPerformed
 
     private void B_FechActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B_FechActionPerformed
         // TODO add your handling code here:
@@ -692,124 +713,132 @@ public class Frm_CalcFina extends javax.swing.JFrame {
     }//GEN-LAST:event_B_FechActionPerformed
 
     private void Cb_ContCrActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Cb_ContCrActionPerformed
-        // TODO add your handling code here:
         if (Cb_ContCr.isSelected() == true){
-            Tf_ContQuanCr.setEnabled(true);
+            Tf_ContQuanCr.setEditable(true);
             Tf_ContQuanCr.setText("");
             Tf_ContQuanCr.requestFocus();
         }
         if (Cb_ContCr.isSelected() == false){
-            Tf_ContQuanCr.setEnabled(false);
+            Tf_ContQuanCr.setEditable(false);
             Tf_ContQuanCr.setText("0");
         }
     }//GEN-LAST:event_Cb_ContCrActionPerformed
 
     private void Cb_ContCsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Cb_ContCsActionPerformed
         if (Cb_ContCs.isSelected() == true){
-            Tf_ContQuanCs.setEnabled(true);
+            Tf_ContQuanCs.setEditable(true);
             Tf_ContQuanCs.setText("");
             Tf_ContQuanCs.requestFocus();
         }
         if (Cb_ContCs.isSelected() == false){
-            Tf_ContQuanCs.setEnabled(false);
+            Tf_ContQuanCs.setEditable(false);
             Tf_ContQuanCs.setText("0");
         }
     }//GEN-LAST:event_Cb_ContCsActionPerformed
 
     private void Cb_ContBlActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Cb_ContBlActionPerformed
-        // TODO add your handling code here:
-        if (Cb_ContBl.isSelected() == true ){
+        if (Cb_ContBl.isSelected() == true){
             Tf_ContQuanBl.setEditable(true);
+            Tf_ContQuanBl.setText("");
+            Tf_ContQuanBl.requestFocus();
         }
-        if (Cb_ContBl.isSelected() == false ){
+        if (Cb_ContBl.isSelected() == false){
             Tf_ContQuanBl.setEditable(false);
             Tf_ContQuanBl.setText("0");
         }
     }//GEN-LAST:event_Cb_ContBlActionPerformed
 
     private void Cb_ContPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Cb_ContPActionPerformed
-        // TODO add your handling code here:
-        if (Cb_ContP.isSelected() == true ){
+        if (Cb_ContP.isSelected() == true){
             Tf_ContQuanP.setEditable(true);
+            Tf_ContQuanP.setText("");
+            Tf_ContQuanP.requestFocus();
         }
-        if (Cb_ContP.isSelected() == false ){
+        if (Cb_ContP.isSelected() == false){
             Tf_ContQuanP.setEditable(false);
             Tf_ContQuanP.setText("0");
         }
     }//GEN-LAST:event_Cb_ContPActionPerformed
 
     private void Cb_ContSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Cb_ContSActionPerformed
-        // TODO add your handling code here:
-        if (Cb_ContS.isSelected() == true ){
+        if (Cb_ContS.isSelected() == true){
             Tf_ContQuanS.setEditable(true);
+            Tf_ContQuanS.setText("");
+            Tf_ContQuanS.requestFocus();
         }
-        if (Cb_ContS.isSelected() == false ){
+        if (Cb_ContS.isSelected() == false){
             Tf_ContQuanS.setEditable(false);
             Tf_ContQuanS.setText("0");
         }
     }//GEN-LAST:event_Cb_ContSActionPerformed
 
     private void Cb_ContCaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Cb_ContCaActionPerformed
-        // TODO add your handling code here:
-        if (Cb_ContCa.isSelected() == true ){
+        if (Cb_ContCa.isSelected() == true){
             Tf_ContQuanCa.setEditable(true);
+            Tf_ContQuanCa.setText("");
+            Tf_ContQuanCa.requestFocus();
         }
-        if (Cb_ContCa.isSelected() == false ){
+        if (Cb_ContCa.isSelected() == false){
             Tf_ContQuanCa.setEditable(false);
             Tf_ContQuanCa.setText("0");
         }
     }//GEN-LAST:event_Cb_ContCaActionPerformed
 
     private void Cb_ContMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Cb_ContMActionPerformed
-        // TODO add your handling code here:
-        if (Cb_ContM.isSelected() == true ){
+        if (Cb_ContM.isSelected() == true){
             Tf_ContQuanM.setEditable(true);
+            Tf_ContQuanM.setText("");
+            Tf_ContQuanM.requestFocus();
         }
-        if (Cb_ContM.isSelected() == false ){
+        if (Cb_ContM.isSelected() == false){
             Tf_ContQuanM.setEditable(false);
             Tf_ContQuanM.setText("0");
         }
     }//GEN-LAST:event_Cb_ContMActionPerformed
 
     private void Cb_ContJActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Cb_ContJActionPerformed
-        // TODO add your handling code here:
-        if (Cb_ContJ.isSelected() == true ){
+        if (Cb_ContJ.isSelected() == true){
             Tf_ContQuanJ.setEditable(true);
+            Tf_ContQuanJ.setText("");
+            Tf_ContQuanJ.requestFocus();
         }
-        if (Cb_ContJ.isSelected() == false ){
+        if (Cb_ContJ.isSelected() == false){
             Tf_ContQuanJ.setEditable(false);
             Tf_ContQuanJ.setText("0");
         }
     }//GEN-LAST:event_Cb_ContJActionPerformed
 
     private void Cb_ContBeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Cb_ContBeActionPerformed
-        // TODO add your handling code here:
-        if (Cb_ContBe.isSelected() == true ){
+        if (Cb_ContBe.isSelected() == true){
             Tf_ContQuanBe.setEditable(true);
+            Tf_ContQuanBe.setText("");
+            Tf_ContQuanBe.requestFocus();
         }
-        if (Cb_ContBe.isSelected() == false ){
+        if (Cb_ContBe.isSelected() == false){
             Tf_ContQuanBe.setEditable(false);
             Tf_ContQuanBe.setText("0");
         }
     }//GEN-LAST:event_Cb_ContBeActionPerformed
 
     private void Cb_ContChActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Cb_ContChActionPerformed
-        // TODO add your handling code here:
-        if (Cb_ContCh.isSelected() == true ){
+        if (Cb_ContCh.isSelected() == true){
             Tf_ContQuanCh.setEditable(true);
+            Tf_ContQuanCh.setText("");
+            Tf_ContQuanCh.requestFocus();
         }
-        if (Cb_ContCh.isSelected() == false ){
+        if (Cb_ContCh.isSelected() == false){
             Tf_ContQuanCh.setEditable(false);
             Tf_ContQuanCh.setText("0");
         }
     }//GEN-LAST:event_Cb_ContChActionPerformed
 
     private void Cb_ContBoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Cb_ContBoActionPerformed
-        // TODO add your handling code here:
-        if (Cb_ContBo.isSelected() == true ){
+        if (Cb_ContBo.isSelected() == true){
             Tf_ContQuanBo.setEditable(true);
+            Tf_ContQuanBo.setText("");
+            Tf_ContQuanBo.requestFocus();
         }
-        if (Cb_ContBo.isSelected() == false ){
+        if (Cb_ContBo.isSelected() == false){
             Tf_ContQuanBo.setEditable(false);
             Tf_ContQuanBo.setText("0");
         }
@@ -825,21 +854,27 @@ public class Frm_CalcFina extends javax.swing.JFrame {
         subtotal();
         if (Rb_FormVist.isSelected() == true){
             Cb_FormQuan.setEnabled(false);
-            double desc = subtotal*0.115;
-            double total = subtotal-desc;
+            double desc = Double.parseDouble(L_SubR.getText())*0.115;
+            double total = Double.parseDouble(L_SubR.getText())-desc;
             L_PagaR.setText(Double.toString(total));
             L_DescR.setText(Double.toString(desc));
             L_FormValoR.setText("0.00");
         }
         if (Rb_FormPraz.isSelected() == true) {
             Cb_FormQuan.setEnabled(true);
-            double total = (subtotal) + (Double.parseDouble(Combobox)*6.90);
-            double pagar = total + (total*0.01);
+            double total = (Double.parseDouble(L_SubR.getText())) + (Double.parseDouble(Combobox)*6.90);
+            double pagar = total * 1.01;
             L_PagaR.setText(Double.toString(pagar));
             L_DescR.setText("0.00");
             double parcela = total / Double.parseDouble(Combobox);
 
-            L_FormValoR.setText(Double.toString(parcela));
+            if (parcela < 10){
+                JOptionPane.showMessageDialog(null, "Mínimo de R$10 por parcela.", "Alerta !", JOptionPane.ERROR_MESSAGE);
+                L_FormValoR.setText(parcela + " (Valor abaixo de R$10)");
+            }
+            else{
+                L_FormValoR.setText(Double.toString(parcela));
+            }
         }
 
     }//GEN-LAST:event_B_CalcActionPerformed
@@ -868,18 +903,18 @@ public class Frm_CalcFina extends javax.swing.JFrame {
         Tf_ContQuanM.setText("0");
         Tf_ContQuanP.setText("0");
         Tf_ContQuanS.setText("0");
-        L_ContValoBl.setText("0");
-        L_ContValoBe.setText("0");
-        L_ContValoBo.setText("0");
-        L_ContValoCa.setText("0");
-        L_ContValoCh.setText("0");
-        L_ContValoCr.setText("0");
-        L_ContValoCs.setText("0");
-        L_ContValoJ.setText("0");
-        L_ContValoL.setText("0");
-        L_ContValoM.setText("0");
-        L_ContValoP.setText("0");
-        L_ContValoS.setText("0");
+        L_ContValoBl.setText("0.00");
+        L_ContValoBe.setText("0.00");
+        L_ContValoBo.setText("0.00");
+        L_ContValoCa.setText("0.00");
+        L_ContValoCh.setText("0.00");
+        L_ContValoCr.setText("0.00");
+        L_ContValoCs.setText("0.00");
+        L_ContValoJ.setText("0.00");
+        L_ContValoL.setText("0.00");
+        L_ContValoM.setText("0.00");
+        L_ContValoP.setText("0.00");
+        L_ContValoS.setText("0.00");
         Cb_ContBo.setSelected(false);
         Cb_ContBe.setSelected(false);
         Cb_ContBl.setSelected(false);
@@ -905,6 +940,9 @@ public class Frm_CalcFina extends javax.swing.JFrame {
         Tf_ContQuanP.setEditable(false);
         Tf_ContQuanS.setEditable(false);
         L_SubR.setText("0.00");
+        L_FormValoR.setText("0.00");
+        L_DescR.setText("0.00");
+        L_PagaR.setText("0.00");
         
         
         
