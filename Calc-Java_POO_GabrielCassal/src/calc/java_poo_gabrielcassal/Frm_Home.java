@@ -5,6 +5,8 @@
  */
 package calc.java_poo_gabrielcassal;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author gabrc
@@ -16,6 +18,7 @@ public class Frm_Home extends javax.swing.JFrame {
      */
     public Frm_Home() {
         initComponents();
+        Rb_CalcMate.setSelected(true);
     }
 
     /**
@@ -143,8 +146,10 @@ public class Frm_Home extends javax.swing.JFrame {
     }//GEN-LAST:event_B_AvanActionPerformed
 
     private void B_SairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B_SairActionPerformed
-        // TODO add your handling code here:
-        System.exit(0);
+        int confirma = JOptionPane.showConfirmDialog(this, "Tem certeza ?", "Alerta",JOptionPane.YES_NO_OPTION);
+        if (confirma == 0){
+            System.exit(0);
+        }
     }//GEN-LAST:event_B_SairActionPerformed
 
     /**

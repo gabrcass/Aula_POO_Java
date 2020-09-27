@@ -6,6 +6,7 @@
 package calc.java_poo_gabrielcassal;
 
 import javafx.util.converter.DoubleStringConverter;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -528,7 +529,7 @@ public class Frm_CalcMate extends javax.swing.JFrame {
                 .addGap(12, 12, 12)
                 .addGroup(P_PoteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, P_PoteLayout.createSequentialGroup()
-                        .addGroup(P_PoteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(P_PoteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(L_PoteQuarR, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(L_PoteQuar))
                         .addGap(22, 22, 22))
@@ -757,8 +758,10 @@ public class Frm_CalcMate extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void B_TodoFechActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B_TodoFechActionPerformed
-        // TODO add your handling code here:
-        dispose();
+        int confirma = JOptionPane.showConfirmDialog(this, "Tem certeza ?", "Alerta",JOptionPane.YES_NO_OPTION);
+        if (confirma == 0){
+            dispose();
+        }
     }//GEN-LAST:event_B_TodoFechActionPerformed
 
     private void B_TabuCalcActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B_TabuCalcActionPerformed

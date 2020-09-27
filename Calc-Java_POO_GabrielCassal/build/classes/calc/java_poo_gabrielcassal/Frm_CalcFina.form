@@ -30,40 +30,40 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <Component id="P_Cont" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Group type="102" attributes="0">
-                              <Component id="L_Paga" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="L_PagaR" min="-2" pref="170" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" attributes="0">
-                              <Component id="L_Desc" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="L_DescR" min="-2" pref="133" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" attributes="0">
-                              <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
-                              <Component id="B_Fech" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Component id="P_Form" min="-2" max="-2" attributes="0"/>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="B_Calc" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="B_Limp" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                  </Group>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="100" max="-2" attributes="0"/>
                       <Component id="B_Sub" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="L_Sub" min="-2" pref="120" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="L_SubR" min="-2" pref="98" max="-2" attributes="0"/>
+                      <Component id="L_SubR" min="-2" pref="111" max="-2" attributes="0"/>
+                  </Group>
+                  <Component id="P_Cont" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                      <Component id="B_Fech" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Component id="P_Form" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                      <Group type="102" attributes="0">
+                          <Component id="L_Paga" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="L_PagaR" min="-2" pref="109" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="L_Desc" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Component id="L_DescR" min="-2" pref="80" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="B_Calc" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Component id="B_Limp" min="-2" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
               </Group>
               <EmptySpace max="32767" attributes="0"/>
@@ -76,7 +76,7 @@
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-                      <Component id="P_Cont" max="32767" attributes="0"/>
+                      <Component id="P_Cont" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" attributes="0">
@@ -98,7 +98,7 @@
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="B_Fech" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="87" max="32767" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -201,9 +201,6 @@
                           <EmptySpace min="-2" pref="75" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
                               <Component id="L_ContValo" max="32767" attributes="0"/>
-                              <Component id="L_ContValoCs" min="-2" pref="69" max="-2" attributes="0"/>
-                              <Component id="L_ContValoBl" alignment="0" min="-2" pref="69" max="-2" attributes="0"/>
-                              <Component id="L_ContValoP" alignment="0" min="-2" pref="69" max="-2" attributes="0"/>
                               <Component id="L_ContValoS" alignment="0" min="-2" pref="69" max="-2" attributes="0"/>
                               <Component id="L_ContValoCa" alignment="0" min="-2" pref="69" max="-2" attributes="0"/>
                               <Component id="L_ContValoM" alignment="0" min="-2" pref="69" max="-2" attributes="0"/>
@@ -212,7 +209,10 @@
                               <Component id="L_ContValoBe" alignment="0" min="-2" pref="69" max="-2" attributes="0"/>
                               <Component id="L_ContValoCh" alignment="0" min="-2" pref="69" max="-2" attributes="0"/>
                               <Component id="L_ContValoBo" alignment="0" min="-2" pref="69" max="-2" attributes="0"/>
-                              <Component id="L_ContValoCr" alignment="0" max="32767" attributes="0"/>
+                              <Component id="L_ContValoCr" alignment="0" min="-2" pref="69" max="-2" attributes="0"/>
+                              <Component id="L_ContValoCs" alignment="0" min="-2" pref="69" max="-2" attributes="0"/>
+                              <Component id="L_ContValoBl" alignment="0" min="-2" pref="69" max="-2" attributes="0"/>
+                              <Component id="L_ContValoP" alignment="0" min="-2" pref="69" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <Component id="Tf_ContQuanS" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -245,12 +245,12 @@
                       <Component id="Cb_ContCr" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="L_ContPrecCr" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="Tf_ContQuanCr" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="L_ContValoCr" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="L_ContValoCr" alignment="3" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="Cb_ContCs" alignment="3" max="32767" attributes="0"/>
-                      <Component id="L_ContValoCs" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="L_ContValoCs" alignment="3" max="-2" attributes="0"/>
                       <Component id="L_ContPrecCs" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="Tf_ContQuanCs" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
@@ -259,67 +259,67 @@
                       <Component id="Cb_ContBl" alignment="3" pref="30" max="32767" attributes="0"/>
                       <Component id="L_ContPrecBl" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="Tf_ContQuanBl" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="L_ContValoBl" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="L_ContValoBl" alignment="3" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="Cb_ContP" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="L_ContPrecP" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="Tf_ContQuanP" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="L_ContValoP" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="L_ContValoP" alignment="3" max="-2" attributes="0"/>
                   </Group>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="Cb_ContS" alignment="3" pref="27" max="32767" attributes="0"/>
                       <Component id="L_ContPrecS" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="Tf_ContQuanS" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="L_ContValoS" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="L_ContValoS" alignment="3" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="Cb_ContCa" alignment="3" max="32767" attributes="0"/>
                       <Component id="L_ContPrecCa" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="Tf_ContQuanCa" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="L_ContValoCa" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="L_ContValoCa" alignment="3" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="Cb_ContM" alignment="3" max="32767" attributes="0"/>
                       <Component id="L_ContPrecM" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="Tf_ContQuanM" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="L_ContValoM" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="L_ContValoM" alignment="3" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="Cb_ContL" alignment="3" max="32767" attributes="0"/>
                       <Component id="L_ContPrecL" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="Tf_ContQuanL" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="L_ContValoL" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="L_ContValoL" alignment="3" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="Cb_ContJ" alignment="3" max="32767" attributes="0"/>
                       <Component id="L_ContPrecJ" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="Tf_ContQuanJ" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="L_ContValoJ" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="L_ContValoJ" alignment="3" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="Cb_ContBe" alignment="3" max="32767" attributes="0"/>
                       <Component id="L_ContPrecBe" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="Tf_ContQuanBe" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="L_ContValoBe" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="L_ContValoBe" alignment="3" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="Cb_ContCh" alignment="3" pref="30" max="32767" attributes="0"/>
                       <Component id="L_ContPrecCh" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="Tf_ContQuanCh" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="L_ContValoCh" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="L_ContValoCh" alignment="3" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="Tf_ContQuanBo" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="L_ContValoBo" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="L_ContValoBo" alignment="3" max="-2" attributes="0"/>
                       <Component id="L_ContPrecBo" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="Cb_ContBo" alignment="3" max="32767" attributes="0"/>
                   </Group>
@@ -736,7 +736,7 @@
                       <Group type="102" attributes="0">
                           <Component id="L_FormValo" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="L_FormValoR" max="32767" attributes="0"/>
+                          <Component id="L_FormValoR" min="-2" pref="88" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
