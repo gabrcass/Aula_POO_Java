@@ -87,6 +87,11 @@ public class Frm_CalcEspe extends javax.swing.JFrame {
         L_MdcNum2.setText("Número 2:");
 
         B_MdcVeri.setText("Varificar");
+        B_MdcVeri.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                B_MdcVeriActionPerformed(evt);
+            }
+        });
 
         B_MdcLimp.setText("Limpar");
 
@@ -153,6 +158,11 @@ public class Frm_CalcEspe extends javax.swing.JFrame {
         });
 
         B_PrimLimp.setText("Limpar");
+        B_PrimLimp.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                B_PrimLimpActionPerformed(evt);
+            }
+        });
 
         L_PrimResu.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         L_PrimResu.setText("...");
@@ -466,13 +476,19 @@ public class Frm_CalcEspe extends javax.swing.JFrame {
     private void B_ParVeriActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B_ParVeriActionPerformed
         // TODO add your handling code here:
         Double num = Double.parseDouble(Tf_ParNum.getText());
-        if (num%2 == 0){
+        if (num == 0){
             L_ParResu.setText("O número é : ");
-            L_ParResuR.setText("Par");
+            L_ParResuR.setText("Inválido");
         }
         else{
-            L_ParResu.setText("O número é : ");
-            L_ParResuR.setText("Impar");
+            if (num%2 == 0){
+                L_ParResu.setText("O número é : ");
+                L_ParResuR.setText("Par");
+            }
+            else{
+                L_ParResu.setText("O número é : ");
+                L_ParResuR.setText("Impar");
+            }
         }
     }//GEN-LAST:event_B_ParVeriActionPerformed
 
@@ -487,15 +503,44 @@ public class Frm_CalcEspe extends javax.swing.JFrame {
     private void B_PrimVeriActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B_PrimVeriActionPerformed
         // TODO add your handling code here:
         double num = Double.parseDouble(Tf_PrimNum.getText());
-        for (int i = 2; i < num; i++) {
-            if (num % i == 0){
-                L_PrimResu.setText("O Número é Primo");
+        int valor = 0;
+        if (num == 0 || num == 1){
+            L_PrimResu.setText("O número é inválido");
+        }
+        else{
+            for (int i = 1 ; i <= num; i++){
+                if (num % i == 0){
+                    valor++;
+                }
             }
-            else{
-                L_PrimResu.setText("O Número não é Primo");
+            if (valor == 2){
+                L_PrimResu.setText("Número informado é primo");
+            }
+            else {
+                L_PrimResu.setText("Número informado não é primo");
             }
         }
+        
     }//GEN-LAST:event_B_PrimVeriActionPerformed
+
+    private void B_PrimLimpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B_PrimLimpActionPerformed
+        L_PrimResu.setText("...");
+        Tf_PrimNum.setText("");
+        Tf_PrimNum.requestFocus();
+    }//GEN-LAST:event_B_PrimLimpActionPerformed
+
+    private void B_MdcVeriActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B_MdcVeriActionPerformed
+        int num1 = Integer.parseInt(Tf_MdcNum1.getText());
+        int num2 = Integer.parseInt(Tf_MdcNum2.getText());
+        int rest;
+        
+        do {
+            rest = num1%num2;
+            num1 = num2;
+            num2 = rest;
+        } while (rest != 0);
+        
+    }//GEN-LAST:event_B_MdcVeriActionPerformed
 
     /**
      * @param args the command line arguments

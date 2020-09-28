@@ -168,6 +168,9 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Varificar"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="B_MdcVeriActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="B_MdcLimp">
           <Properties>
@@ -262,6 +265,9 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Limpar"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="B_PrimLimpActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="L_PrimResu">
           <Properties>
