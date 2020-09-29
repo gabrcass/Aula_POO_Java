@@ -13,6 +13,9 @@ import javax.swing.JOptionPane;
  */
 public class Frm_Home extends javax.swing.JFrame {
 
+    public void set0(){
+        String.setText("0");
+    }
     /**
      * Creates new form Frm_Home
      */

@@ -5,6 +5,8 @@
  */
 package calc.java_poo_gabrielcassal;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author gabrc
@@ -425,8 +427,18 @@ public class Frm_CalcEspe extends javax.swing.JFrame {
         );
 
         B_Limp.setText("Limpar Todos");
+        B_Limp.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                B_LimpActionPerformed(evt);
+            }
+        });
 
         B_Fech.setText("Fechar formulário");
+        B_Fech.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                B_FechActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -560,6 +572,21 @@ public class Frm_CalcEspe extends javax.swing.JFrame {
         L_BhasX1R.setText(Double.toString(Bhas1));
         L_BhasX2R.setText(Double.toString(Bhas2));
     }//GEN-LAST:event_B_BhasVeriActionPerformed
+
+    private void B_FechActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B_FechActionPerformed
+        int confirma = JOptionPane.showConfirmDialog(this, "Tem certeza ?", "Alerta",JOptionPane.YES_NO_OPTION);
+        if (confirma == 0){
+            dispose();
+        }
+    }//GEN-LAST:event_B_FechActionPerformed
+
+    private void B_LimpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B_LimpActionPerformed
+        // TODO add your handling code here:
+        Tf_MdcNum1.setText("");
+        Tf_MdcNum2.setText("");
+        L_MdcResuR.setText("0");
+        
+    }//GEN-LAST:event_B_LimpActionPerformed
 
     /**
      * @param args the command line arguments

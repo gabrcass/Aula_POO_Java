@@ -655,11 +655,17 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Limpar Todos"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="B_LimpActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="B_Fech">
       <Properties>
         <Property name="text" type="java.lang.String" value="Fechar formul&#xe1;rio"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="B_FechActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>
