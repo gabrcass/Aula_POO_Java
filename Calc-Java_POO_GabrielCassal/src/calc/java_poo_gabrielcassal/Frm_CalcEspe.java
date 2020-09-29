@@ -331,6 +331,11 @@ public class Frm_CalcEspe extends javax.swing.JFrame {
         L_BhasNum3.setText("Número 3:");
 
         B_BhasVeri.setText("Varificar");
+        B_BhasVeri.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                B_BhasVeriActionPerformed(evt);
+            }
+        });
 
         B_BhasLimp.setText("Limpar");
 
@@ -534,13 +539,27 @@ public class Frm_CalcEspe extends javax.swing.JFrame {
         int num2 = Integer.parseInt(Tf_MdcNum2.getText());
         int rest;
         
-        do {
-            rest = num1%num2;
-            num1 = num2;
-            num2 = rest;
-        } while (rest != 0);
+        
         
     }//GEN-LAST:event_B_MdcVeriActionPerformed
+
+    private void B_BhasVeriActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B_BhasVeriActionPerformed
+        int a = Integer.parseInt(Tf_BhasNum1.getText());
+        int b = Integer.parseInt(Tf_BhasNum2.getText());
+        int c = Integer.parseInt(Tf_BhasNum3.getText());
+        double delta;
+        double Bhas1;
+        double Bhas2;
+        
+        delta = (Math.pow(b, 2)) - 4*a*c;
+        
+        Bhas1 = (- b + Math.sqrt(delta)) / (2*a);
+        Bhas2 = (- b - Math.sqrt(delta)) / (2*a);
+        
+        L_BhasDeltR.setText(Double.toString(delta));
+        L_BhasX1R.setText(Double.toString(Bhas1));
+        L_BhasX2R.setText(Double.toString(Bhas2));
+    }//GEN-LAST:event_B_BhasVeriActionPerformed
 
     /**
      * @param args the command line arguments

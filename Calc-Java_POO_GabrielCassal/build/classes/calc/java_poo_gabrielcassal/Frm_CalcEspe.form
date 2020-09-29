@@ -604,6 +604,9 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Varificar"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="B_BhasVeriActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="B_BhasLimp">
           <Properties>
