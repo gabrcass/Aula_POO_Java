@@ -16,10 +16,18 @@ import javax.swing.JOptionPane;
  */
 public class Frm_CalcFina extends javax.swing.JFrame {
 
+    public void sair(){
+        int confirma = JOptionPane.showConfirmDialog(this, "Tem certeza ?", "Alerta",JOptionPane.YES_NO_OPTION);
+        if (confirma == 0){
+            dispose();
+        }
+    }
+    
+    DecimalFormat decimal = new DecimalFormat("#0.00");
+    
     double V_total;
     
     public void subtotal(){
-        DecimalFormat decimal = new DecimalFormat("#0.00");
         
         double Be = Double.parseDouble(Tf_ContQuanBe.getText())*69.90;
         L_ContValoBe.setText(decimal.format(Be));
@@ -149,6 +157,12 @@ public class Frm_CalcFina extends javax.swing.JFrame {
         B_Calc = new javax.swing.JButton();
         B_Limp = new javax.swing.JButton();
         B_Fech = new javax.swing.JButton();
+        MB_Fina = new javax.swing.JMenuBar();
+        M_Nave = new javax.swing.JMenu();
+        MI_NaveMate = new javax.swing.JMenuItem();
+        MI_NaveEspe = new javax.swing.JMenuItem();
+        MI_NaveSair = new javax.swing.JMenuItem();
+        M_Sobre = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setName("Cálculo Financeiro"); // NOI18N
@@ -688,6 +702,56 @@ public class Frm_CalcFina extends javax.swing.JFrame {
             }
         });
 
+        M_Nave.setText("Navegar");
+
+        MI_NaveMate.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_M, java.awt.event.InputEvent.SHIFT_MASK | java.awt.event.InputEvent.CTRL_MASK));
+        MI_NaveMate.setText("Cálculos Matemáticos");
+        MI_NaveMate.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MI_NaveMateActionPerformed(evt);
+            }
+        });
+        M_Nave.add(MI_NaveMate);
+
+        MI_NaveEspe.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_E, java.awt.event.InputEvent.SHIFT_MASK | java.awt.event.InputEvent.CTRL_MASK));
+        MI_NaveEspe.setText("Cálculos Especiais");
+        MI_NaveEspe.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MI_NaveEspeActionPerformed(evt);
+            }
+        });
+        M_Nave.add(MI_NaveEspe);
+
+        MI_NaveSair.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_ESCAPE, 0));
+        MI_NaveSair.setText("Sair");
+        MI_NaveSair.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MI_NaveSairActionPerformed(evt);
+            }
+        });
+        M_Nave.add(MI_NaveSair);
+
+        MB_Fina.add(M_Nave);
+
+        M_Sobre.setText("Sobre");
+        M_Sobre.addMenuKeyListener(new javax.swing.event.MenuKeyListener() {
+            public void menuKeyPressed(javax.swing.event.MenuKeyEvent evt) {
+            }
+            public void menuKeyReleased(javax.swing.event.MenuKeyEvent evt) {
+            }
+            public void menuKeyTyped(javax.swing.event.MenuKeyEvent evt) {
+                M_SobreMenuKeyTyped(evt);
+            }
+        });
+        M_Sobre.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                M_SobreMouseClicked(evt);
+            }
+        });
+        MB_Fina.add(M_Sobre);
+
+        setJMenuBar(MB_Fina);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -770,10 +834,7 @@ public class Frm_CalcFina extends javax.swing.JFrame {
     }//GEN-LAST:event_Cb_ContLActionPerformed
 
     private void B_FechActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B_FechActionPerformed
-        int confirma = JOptionPane.showConfirmDialog(this, "Tem certeza ?", "Alerta",JOptionPane.YES_NO_OPTION);
-        if (confirma == 0){
-            dispose();
-        }
+        sair();
     }//GEN-LAST:event_B_FechActionPerformed
 
     private void Cb_ContCrActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Cb_ContCrActionPerformed
@@ -913,7 +974,6 @@ public class Frm_CalcFina extends javax.swing.JFrame {
     }//GEN-LAST:event_B_SubActionPerformed
 
     private void B_CalcActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B_CalcActionPerformed
-        DecimalFormat decimal = new DecimalFormat("#0.00");
         String Combobox = (String) Cb_FormQuan.getSelectedItem();
         subtotal();
         if (Rb_FormVist.isSelected() == true){
@@ -927,7 +987,7 @@ public class Frm_CalcFina extends javax.swing.JFrame {
         if (Rb_FormPraz.isSelected() == true) {
             Cb_FormQuan.setEnabled(true);
             double pagar = V_total * 1.01 + (Double.parseDouble(Combobox)*6.90);
-            L_PagaR.setText(Double.toString(pagar));
+            L_PagaR.setText(decimal.format(pagar));
             L_DescR.setText("0.00");
             double parcela = pagar / Double.parseDouble(Combobox);
 
@@ -1016,6 +1076,26 @@ public class Frm_CalcFina extends javax.swing.JFrame {
             evt.consume();
         }
     }//GEN-LAST:event_Tf_ContKeyTyped
+
+    private void MI_NaveMateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MI_NaveMateActionPerformed
+        new Frm_CalcMate().setVisible(true);
+    }//GEN-LAST:event_MI_NaveMateActionPerformed
+
+    private void MI_NaveEspeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MI_NaveEspeActionPerformed
+        new Frm_CalcEspe().setVisible(true);
+    }//GEN-LAST:event_MI_NaveEspeActionPerformed
+
+    private void MI_NaveSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MI_NaveSairActionPerformed
+        sair();
+    }//GEN-LAST:event_MI_NaveSairActionPerformed
+
+    private void M_SobreMenuKeyTyped(javax.swing.event.MenuKeyEvent evt) {//GEN-FIRST:event_M_SobreMenuKeyTyped
+        new Frm_About().setVisible(true);
+    }//GEN-LAST:event_M_SobreMenuKeyTyped
+
+    private void M_SobreMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_M_SobreMouseClicked
+        new Frm_About().setVisible(true);
+    }//GEN-LAST:event_M_SobreMouseClicked
 
     /**
      * @param args the command line arguments
@@ -1108,6 +1188,12 @@ public class Frm_CalcFina extends javax.swing.JFrame {
     private javax.swing.JLabel L_PagaR;
     private javax.swing.JLabel L_Sub;
     private javax.swing.JLabel L_SubR;
+    private javax.swing.JMenuBar MB_Fina;
+    private javax.swing.JMenuItem MI_NaveEspe;
+    private javax.swing.JMenuItem MI_NaveMate;
+    private javax.swing.JMenuItem MI_NaveSair;
+    private javax.swing.JMenu M_Nave;
+    private javax.swing.JMenu M_Sobre;
     private javax.swing.JPanel P_Cont;
     private javax.swing.JPanel P_Form;
     private javax.swing.JRadioButton Rb_FormPraz;

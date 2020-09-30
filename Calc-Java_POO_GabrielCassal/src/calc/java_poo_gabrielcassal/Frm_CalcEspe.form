@@ -1,11 +1,67 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <NonVisualComponents>
+    <Menu class="javax.swing.JMenuBar" name="MB_Espe">
+      <SubComponents>
+        <Menu class="javax.swing.JMenu" name="M_Nave">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Navegar"/>
+          </Properties>
+          <SubComponents>
+            <MenuItem class="javax.swing.JMenuItem" name="MI_NaveMate">
+              <Properties>
+                <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
+                  <KeyStroke key="Shift+Ctrl+M"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="C&#xe1;lculos Matem&#xe1;ticos"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MI_NaveMateActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="MI_NaveFina">
+              <Properties>
+                <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
+                  <KeyStroke key="Shift+Ctrl+F"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="C&#xe1;lculos Financeiros"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MI_NaveFinaActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="MI_NaveSair">
+              <Properties>
+                <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
+                  <KeyStroke key="ESCAPE"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Sair"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MI_NaveSairActionPerformed"/>
+              </Events>
+            </MenuItem>
+          </SubComponents>
+        </Menu>
+        <Menu class="javax.swing.JMenu" name="M_Sobre">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Sobre"/>
+          </Properties>
+          <Events>
+            <EventHandler event="menuKeyTyped" listener="javax.swing.event.MenuKeyListener" parameters="javax.swing.event.MenuKeyEvent" handler="M_SobreMenuKeyTyped"/>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="M_SobreMouseClicked"/>
+          </Events>
+        </Menu>
+      </SubComponents>
+    </Menu>
+  </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
     <Property name="name" type="java.lang.String" value="C&#xe1;lculos Especiais" noResource="true"/>
   </Properties>
   <SyntheticProperties>
+    <SyntheticProperty name="menuBar" type="java.lang.String" value="MB_Espe"/>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
     <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
   </SyntheticProperties>
@@ -151,6 +207,9 @@
       </Layout>
       <SubComponents>
         <Component class="javax.swing.JTextField" name="Tf_MdcNum1">
+          <Events>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="Tf_KeyTyped"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="L_MdcNum1">
           <Properties>
@@ -158,6 +217,9 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="Tf_MdcNum2">
+          <Events>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="Tf_KeyTyped"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="L_MdcNum2">
           <Properties>
@@ -247,6 +309,9 @@
       </Layout>
       <SubComponents>
         <Component class="javax.swing.JTextField" name="Tf_PrimNum">
+          <Events>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="Tf_KeyTyped"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="L_PrimNum">
           <Properties>
@@ -347,6 +412,9 @@
       </Layout>
       <SubComponents>
         <Component class="javax.swing.JTextField" name="Tf_MmcNum1">
+          <Events>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="Tf_KeyTyped"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="L_MmcNum1">
           <Properties>
@@ -354,6 +422,9 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="Tf_MmcNum2">
+          <Events>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="Tf_KeyTyped"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="L_MmcNum2">
           <Properties>
@@ -452,6 +523,9 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="Tf_ParNum">
+          <Events>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="Tf_KeyTyped"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="B_ParVeri">
           <Properties>
@@ -585,6 +659,9 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="Tf_BhasNum1">
+          <Events>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="Tf_KeyTyped"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="L_BhasNum2">
           <Properties>
@@ -592,6 +669,9 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="Tf_BhasNum2">
+          <Events>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="Tf_KeyTyped"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="L_BhasNum3">
           <Properties>
@@ -599,6 +679,9 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="Tf_BhasNum3">
+          <Events>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="Tf_KeyTyped"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="B_BhasVeri">
           <Properties>

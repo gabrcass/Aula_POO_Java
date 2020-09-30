@@ -5,6 +5,7 @@
  */
 package calc.java_poo_gabrielcassal;
 
+import java.text.DecimalFormat;
 import javax.swing.JOptionPane;
 
 /**
@@ -13,6 +14,15 @@ import javax.swing.JOptionPane;
  */
 public class Frm_CalcEspe extends javax.swing.JFrame {
 
+    public void sair(){
+        int confirma = JOptionPane.showConfirmDialog(this, "Tem certeza ?", "Alerta",JOptionPane.YES_NO_OPTION);
+        if (confirma == 0){
+            dispose();
+        }
+    }
+    
+    DecimalFormat decimal = new DecimalFormat("#0.00");
+    
     /**
      * Creates new form Frm_CalcEspe
      */
@@ -78,13 +88,31 @@ public class Frm_CalcEspe extends javax.swing.JFrame {
         L_BhasX2R = new javax.swing.JLabel();
         B_Limp = new javax.swing.JButton();
         B_Fech = new javax.swing.JButton();
+        MB_Espe = new javax.swing.JMenuBar();
+        M_Nave = new javax.swing.JMenu();
+        MI_NaveMate = new javax.swing.JMenuItem();
+        MI_NaveFina = new javax.swing.JMenuItem();
+        MI_NaveSair = new javax.swing.JMenuItem();
+        M_Sobre = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setName("Cálculos Especiais"); // NOI18N
 
         P_Mdc.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED), "MDC (Maior Divisor Comum):"));
 
+        Tf_MdcNum1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                Tf_KeyTyped(evt);
+            }
+        });
+
         L_MdcNum1.setText("Número 1:");
+
+        Tf_MdcNum2.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                Tf_KeyTyped(evt);
+            }
+        });
 
         L_MdcNum2.setText("Número 2:");
 
@@ -150,6 +178,12 @@ public class Frm_CalcEspe extends javax.swing.JFrame {
 
         P_Prim.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED), "Número Primo:"));
 
+        Tf_PrimNum.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                Tf_KeyTyped(evt);
+            }
+        });
+
         L_PrimNum.setText("Número:");
 
         B_PrimVeri.setText("Verificar");
@@ -205,7 +239,19 @@ public class Frm_CalcEspe extends javax.swing.JFrame {
 
         P_Mmc.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED), "MMC (Mínimo Múltiplo Comum):"));
 
+        Tf_MmcNum1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                Tf_KeyTyped(evt);
+            }
+        });
+
         L_MmcNum1.setText("Número 1:");
+
+        Tf_MmcNum2.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                Tf_KeyTyped(evt);
+            }
+        });
 
         L_MmcNum2.setText("Número 2:");
 
@@ -268,6 +314,12 @@ public class Frm_CalcEspe extends javax.swing.JFrame {
 
         L_ParNum.setText("Número:");
 
+        Tf_ParNum.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                Tf_KeyTyped(evt);
+            }
+        });
+
         B_ParVeri.setText("Verificar");
         B_ParVeri.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -328,9 +380,27 @@ public class Frm_CalcEspe extends javax.swing.JFrame {
 
         L_BhasNum1.setText("Número 1:");
 
+        Tf_BhasNum1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                Tf_KeyTyped(evt);
+            }
+        });
+
         L_BhasNum2.setText("Número 2:");
 
+        Tf_BhasNum2.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                Tf_KeyTyped(evt);
+            }
+        });
+
         L_BhasNum3.setText("Número 3:");
+
+        Tf_BhasNum3.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                Tf_KeyTyped(evt);
+            }
+        });
 
         B_BhasVeri.setText("Varificar");
         B_BhasVeri.addActionListener(new java.awt.event.ActionListener() {
@@ -439,6 +509,56 @@ public class Frm_CalcEspe extends javax.swing.JFrame {
                 B_FechActionPerformed(evt);
             }
         });
+
+        M_Nave.setText("Navegar");
+
+        MI_NaveMate.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_M, java.awt.event.InputEvent.SHIFT_MASK | java.awt.event.InputEvent.CTRL_MASK));
+        MI_NaveMate.setText("Cálculos Matemáticos");
+        MI_NaveMate.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MI_NaveMateActionPerformed(evt);
+            }
+        });
+        M_Nave.add(MI_NaveMate);
+
+        MI_NaveFina.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F, java.awt.event.InputEvent.SHIFT_MASK | java.awt.event.InputEvent.CTRL_MASK));
+        MI_NaveFina.setText("Cálculos Financeiros");
+        MI_NaveFina.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MI_NaveFinaActionPerformed(evt);
+            }
+        });
+        M_Nave.add(MI_NaveFina);
+
+        MI_NaveSair.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_ESCAPE, 0));
+        MI_NaveSair.setText("Sair");
+        MI_NaveSair.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MI_NaveSairActionPerformed(evt);
+            }
+        });
+        M_Nave.add(MI_NaveSair);
+
+        MB_Espe.add(M_Nave);
+
+        M_Sobre.setText("Sobre");
+        M_Sobre.addMenuKeyListener(new javax.swing.event.MenuKeyListener() {
+            public void menuKeyPressed(javax.swing.event.MenuKeyEvent evt) {
+            }
+            public void menuKeyReleased(javax.swing.event.MenuKeyEvent evt) {
+            }
+            public void menuKeyTyped(javax.swing.event.MenuKeyEvent evt) {
+                M_SobreMenuKeyTyped(evt);
+            }
+        });
+        M_Sobre.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                M_SobreMouseClicked(evt);
+            }
+        });
+        MB_Espe.add(M_Sobre);
+
+        setJMenuBar(MB_Espe);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -568,16 +688,13 @@ public class Frm_CalcEspe extends javax.swing.JFrame {
         Bhas1 = (- b + Math.sqrt(delta)) / (2*a);
         Bhas2 = (- b - Math.sqrt(delta)) / (2*a);
         
-        L_BhasDeltR.setText(Double.toString(delta));
-        L_BhasX1R.setText(Double.toString(Bhas1));
-        L_BhasX2R.setText(Double.toString(Bhas2));
+        L_BhasDeltR.setText(decimal.format(delta));
+        L_BhasX1R.setText(decimal.format(Bhas1));
+        L_BhasX2R.setText(decimal.format(Bhas2));
     }//GEN-LAST:event_B_BhasVeriActionPerformed
 
     private void B_FechActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B_FechActionPerformed
-        int confirma = JOptionPane.showConfirmDialog(this, "Tem certeza ?", "Alerta",JOptionPane.YES_NO_OPTION);
-        if (confirma == 0){
-            dispose();
-        }
+        sair();
     }//GEN-LAST:event_B_FechActionPerformed
 
     private void B_LimpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B_LimpActionPerformed
@@ -587,6 +704,33 @@ public class Frm_CalcEspe extends javax.swing.JFrame {
         L_MdcResuR.setText("0");
         
     }//GEN-LAST:event_B_LimpActionPerformed
+
+    private void MI_NaveMateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MI_NaveMateActionPerformed
+        new Frm_CalcMate().setVisible(true);
+    }//GEN-LAST:event_MI_NaveMateActionPerformed
+
+    private void MI_NaveFinaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MI_NaveFinaActionPerformed
+        new Frm_CalcFina().setVisible(true);
+    }//GEN-LAST:event_MI_NaveFinaActionPerformed
+
+    private void MI_NaveSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MI_NaveSairActionPerformed
+        sair();
+    }//GEN-LAST:event_MI_NaveSairActionPerformed
+
+    private void M_SobreMenuKeyTyped(javax.swing.event.MenuKeyEvent evt) {//GEN-FIRST:event_M_SobreMenuKeyTyped
+        new Frm_About().setVisible(true);
+    }//GEN-LAST:event_M_SobreMenuKeyTyped
+
+    private void M_SobreMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_M_SobreMouseClicked
+        new Frm_About().setVisible(true);
+    }//GEN-LAST:event_M_SobreMouseClicked
+
+    private void Tf_KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_Tf_KeyTyped
+        String caracteres = "0987654321";
+        if (!caracteres.contains(evt.getKeyChar()+"")){
+            evt.consume();
+        }
+    }//GEN-LAST:event_Tf_KeyTyped
 
     /**
      * @param args the command line arguments
@@ -659,6 +803,12 @@ public class Frm_CalcEspe extends javax.swing.JFrame {
     private javax.swing.JLabel L_ParResuR;
     private javax.swing.JLabel L_PrimNum;
     private javax.swing.JLabel L_PrimResu;
+    private javax.swing.JMenuBar MB_Espe;
+    private javax.swing.JMenuItem MI_NaveFina;
+    private javax.swing.JMenuItem MI_NaveMate;
+    private javax.swing.JMenuItem MI_NaveSair;
+    private javax.swing.JMenu M_Nave;
+    private javax.swing.JMenu M_Sobre;
     private javax.swing.JPanel P_Bhas;
     private javax.swing.JPanel P_Mdc;
     private javax.swing.JPanel P_Mmc;

@@ -5,6 +5,7 @@
  */
 package calc.java_poo_gabrielcassal;
 
+import java.text.DecimalFormat;
 import javafx.util.converter.DoubleStringConverter;
 import javax.swing.JOptionPane;
 
@@ -14,6 +15,55 @@ import javax.swing.JOptionPane;
  */
 public class Frm_CalcMate extends javax.swing.JFrame {
 
+    public void sair(){
+        int confirma = JOptionPane.showConfirmDialog(this, "Tem certeza ?", "Alerta",JOptionPane.YES_NO_OPTION);
+        if (confirma == 0){
+            dispose();
+        }
+    }
+    
+    public void PoteLimp(){
+        L_PoteQuadR.setText("0");
+        L_PoteCuboR.setText("0");
+        L_PoteQuarR.setText("0");
+        L_PoteQuinR.setText("0");
+        L_PoteSextR.setText("0");
+        L_PoteRaizR.setText("0");
+        Tf_PoteNum.setText("0");
+    }
+    
+    public void TabuLimp(){
+        List_TabuList.removeAll();
+        Tf_TabuNum.setText("");
+    }
+    
+    public void MultLimp(){
+        L_MultDobrR.setText("0");
+        L_MultTripR.setText("0");
+        L_MultQuadR.setText("0");
+        L_MultQuinR.setText("0");
+    }
+    
+    public void MediLimp(){
+        Tf_MediNum1.setText("0");
+        Tf_MediNum2.setText("0");
+        Tf_MediNum3.setText("0");
+        Tf_MediNum4.setText("0");
+        L_MediMediR.setText("");
+    }
+    
+    public void GrauLimp(){
+        L_GrauSenoR.setText("0");
+        L_GrauCossR.setText("0");
+        Tf_GrauNum.setText("");
+    }
+    
+    public void FatoLimp(){
+        L_FatoResuR.setText("0");
+        Tf_FatoNum.setText("");
+    }
+    
+    DecimalFormat decimal = new DecimalFormat("#0.00");
     /**
      * Creates new form Frm_CalcMate
      */
@@ -98,6 +148,12 @@ public class Frm_CalcMate extends javax.swing.JFrame {
         P_Todo = new javax.swing.JPanel();
         B_TodoFech = new javax.swing.JButton();
         B_TodoLimp = new javax.swing.JButton();
+        MB_Mate = new javax.swing.JMenuBar();
+        M_Mate = new javax.swing.JMenu();
+        MI_NaveFina = new javax.swing.JMenuItem();
+        MI_NaveEspe = new javax.swing.JMenuItem();
+        MI_NaveSair = new javax.swing.JMenuItem();
+        M_Sobre = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setName("Cálculo Matemático"); // NOI18N
@@ -111,6 +167,11 @@ public class Frm_CalcMate extends javax.swing.JFrame {
 
         Tf_TabuNum.setMinimumSize(new java.awt.Dimension(50, 25));
         Tf_TabuNum.setPreferredSize(new java.awt.Dimension(100, 25));
+        Tf_TabuNum.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                Tf_KeyTyped(evt);
+            }
+        });
 
         B_TabuLimp.setText("Limpar");
         B_TabuLimp.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -170,6 +231,11 @@ public class Frm_CalcMate extends javax.swing.JFrame {
 
         Tf_GrauNum.setMinimumSize(new java.awt.Dimension(50, 25));
         Tf_GrauNum.setPreferredSize(new java.awt.Dimension(100, 25));
+        Tf_GrauNum.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                Tf_KeyTyped(evt);
+            }
+        });
 
         B_GrauCalc.setText("Calcular");
         B_GrauCalc.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -245,6 +311,11 @@ public class Frm_CalcMate extends javax.swing.JFrame {
 
         Tf_FatoNum.setMinimumSize(new java.awt.Dimension(50, 25));
         Tf_FatoNum.setPreferredSize(new java.awt.Dimension(100, 25));
+        Tf_FatoNum.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                Tf_KeyTyped(evt);
+            }
+        });
 
         B_FatoCalc.setText("Calcular");
         B_FatoCalc.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -310,6 +381,11 @@ public class Frm_CalcMate extends javax.swing.JFrame {
 
         Tf_MultNum.setMinimumSize(new java.awt.Dimension(50, 25));
         Tf_MultNum.setPreferredSize(new java.awt.Dimension(100, 25));
+        Tf_MultNum.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                Tf_KeyTyped(evt);
+            }
+        });
 
         B_MultCalc.setText("Calcular");
         B_MultCalc.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -411,6 +487,11 @@ public class Frm_CalcMate extends javax.swing.JFrame {
 
         Tf_PoteNum.setMinimumSize(new java.awt.Dimension(50, 25));
         Tf_PoteNum.setPreferredSize(new java.awt.Dimension(100, 25));
+        Tf_PoteNum.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                Tf_KeyTyped(evt);
+            }
+        });
 
         B_PoteCalc.setText("Calcular");
         B_PoteCalc.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -550,6 +631,11 @@ public class Frm_CalcMate extends javax.swing.JFrame {
         Tf_MediNum1.setMaximumSize(new java.awt.Dimension(0, 0));
         Tf_MediNum1.setMinimumSize(new java.awt.Dimension(0, 0));
         Tf_MediNum1.setPreferredSize(new java.awt.Dimension(100, 25));
+        Tf_MediNum1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                Tf_KeyTyped(evt);
+            }
+        });
 
         B_MediCalc.setText("Calcular");
         B_MediCalc.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -578,6 +664,11 @@ public class Frm_CalcMate extends javax.swing.JFrame {
         Tf_MediNum2.setMaximumSize(new java.awt.Dimension(0, 0));
         Tf_MediNum2.setMinimumSize(new java.awt.Dimension(0, 0));
         Tf_MediNum2.setPreferredSize(new java.awt.Dimension(100, 25));
+        Tf_MediNum2.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                Tf_KeyTyped(evt);
+            }
+        });
 
         L_MediNum3.setText("3º Valor:");
         L_MediNum3.setAlignmentX(0.5F);
@@ -588,6 +679,11 @@ public class Frm_CalcMate extends javax.swing.JFrame {
         Tf_MediNum3.setMaximumSize(new java.awt.Dimension(0, 0));
         Tf_MediNum3.setMinimumSize(new java.awt.Dimension(0, 0));
         Tf_MediNum3.setPreferredSize(new java.awt.Dimension(100, 25));
+        Tf_MediNum3.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                Tf_KeyTyped(evt);
+            }
+        });
 
         L_MediNum4.setText("4º Valor:");
         L_MediNum4.setAlignmentX(0.5F);
@@ -598,6 +694,11 @@ public class Frm_CalcMate extends javax.swing.JFrame {
         Tf_MediNum4.setMaximumSize(new java.awt.Dimension(0, 0));
         Tf_MediNum4.setMinimumSize(new java.awt.Dimension(0, 0));
         Tf_MediNum4.setPreferredSize(new java.awt.Dimension(100, 25));
+        Tf_MediNum4.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                Tf_KeyTyped(evt);
+            }
+        });
 
         L_MediMedi.setText("Média: ");
 
@@ -710,6 +811,56 @@ public class Frm_CalcMate extends javax.swing.JFrame {
                 .addGap(35, 35, 35))
         );
 
+        M_Mate.setText("Navegar");
+
+        MI_NaveFina.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F, java.awt.event.InputEvent.SHIFT_MASK | java.awt.event.InputEvent.CTRL_MASK));
+        MI_NaveFina.setText("Cálculos Financeiros");
+        MI_NaveFina.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MI_NaveFinaActionPerformed(evt);
+            }
+        });
+        M_Mate.add(MI_NaveFina);
+
+        MI_NaveEspe.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_E, java.awt.event.InputEvent.SHIFT_MASK | java.awt.event.InputEvent.CTRL_MASK));
+        MI_NaveEspe.setText("Cálculos Especiais");
+        MI_NaveEspe.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MI_NaveEspeActionPerformed(evt);
+            }
+        });
+        M_Mate.add(MI_NaveEspe);
+
+        MI_NaveSair.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_ESCAPE, 0));
+        MI_NaveSair.setText("Sair");
+        MI_NaveSair.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MI_NaveSairActionPerformed(evt);
+            }
+        });
+        M_Mate.add(MI_NaveSair);
+
+        MB_Mate.add(M_Mate);
+
+        M_Sobre.setText("Sobre");
+        M_Sobre.addMenuKeyListener(new javax.swing.event.MenuKeyListener() {
+            public void menuKeyPressed(javax.swing.event.MenuKeyEvent evt) {
+            }
+            public void menuKeyReleased(javax.swing.event.MenuKeyEvent evt) {
+            }
+            public void menuKeyTyped(javax.swing.event.MenuKeyEvent evt) {
+                M_SobreMenuKeyTyped(evt);
+            }
+        });
+        M_Sobre.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                M_SobreMouseClicked(evt);
+            }
+        });
+        MB_Mate.add(M_Sobre);
+
+        setJMenuBar(MB_Mate);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -749,7 +900,7 @@ public class Frm_CalcMate extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(P_Pote, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(P_Grau, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(14, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         P_Tabu.getAccessibleContext().setAccessibleName("");
@@ -758,13 +909,11 @@ public class Frm_CalcMate extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void B_TodoFechActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B_TodoFechActionPerformed
-        int confirma = JOptionPane.showConfirmDialog(this, "Tem certeza ?", "Alerta",JOptionPane.YES_NO_OPTION);
-        if (confirma == 0){
-            dispose();
-        }
+        sair();
     }//GEN-LAST:event_B_TodoFechActionPerformed
 
     private void B_TabuCalcActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B_TabuCalcActionPerformed
+        List_TabuList.removeAll();
         int tabuadaR;
         int tabuada = Integer.parseInt(Tf_TabuNum.getText());
         for(int contador=1; contador<= 10; contador++){
@@ -774,14 +923,11 @@ public class Frm_CalcMate extends javax.swing.JFrame {
     }//GEN-LAST:event_B_TabuCalcActionPerformed
 
     private void B_TabuLimpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B_TabuLimpActionPerformed
-        // set 0 in field Tf_TabuNum
-        List_TabuList.removeAll();
-        Tf_TabuNum.setText("");
+        TabuLimp();
         Tf_TabuNum.requestFocus();
     }//GEN-LAST:event_B_TabuLimpActionPerformed
 
     private void B_PoteCalcActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B_PoteCalcActionPerformed
-        // TODO add your handling code here:
         double base = Double.parseDouble(Tf_PoteNum.getText());
         double quadrado = Math.pow(base, 2);
         double cubo = Math.pow(base, 3);
@@ -789,112 +935,69 @@ public class Frm_CalcMate extends javax.swing.JFrame {
         double quinta = Math.pow(base, 5);
         double sexta = Math.pow(base, 6);
         double raiz = Math.sqrt(base);
-        L_PoteQuadR.setText(Double.toString(quadrado));
-        L_PoteCuboR.setText(Double.toString(cubo));
-        L_PoteQuarR.setText(Double.toString(quarta));
-        L_PoteQuinR.setText(Double.toString(quinta));
-        L_PoteSextR.setText(Double.toString(sexta));
-        L_PoteRaizR.setText(Double.toString(raiz));
+        L_PoteQuadR.setText(decimal.format(quadrado));
+        L_PoteCuboR.setText(decimal.format(cubo));
+        L_PoteQuarR.setText(decimal.format(quarta));
+        L_PoteQuinR.setText(decimal.format(quinta));
+        L_PoteSextR.setText(decimal.format(sexta));
+        L_PoteRaizR.setText(decimal.format(raiz));
         
     }//GEN-LAST:event_B_PoteCalcActionPerformed
 
     private void B_PoteLimpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B_PoteLimpActionPerformed
-        // TODO add your handling code here:
-        L_PoteQuadR.setText("0");
-        L_PoteCuboR.setText("0");
-        L_PoteQuarR.setText("0");
-        L_PoteQuinR.setText("0");
-        L_PoteSextR.setText("0");
-        L_PoteRaizR.setText("0");
-        Tf_PoteNum.setText("0");
+        PoteLimp();
         Tf_PoteNum.requestFocus();
     }//GEN-LAST:event_B_PoteLimpActionPerformed
 
     private void B_MultCalcActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B_MultCalcActionPerformed
-        // TODO add your handling code here:
         double n1 = Double.parseDouble(Tf_MultNum.getText());
-        L_MultDobrR.setText(Double.toString(n1*2));
-        L_MultTripR.setText(Double.toString(n1*3));
-        L_MultQuadR.setText(Double.toString(n1*4));
-        L_MultQuinR.setText(Double.toString(n1*5));
+        L_MultDobrR.setText(decimal.format(n1*2));
+        L_MultTripR.setText(decimal.format(n1*3));
+        L_MultQuadR.setText(decimal.format(n1*4));
+        L_MultQuinR.setText(decimal.format(n1*5));
         
     }//GEN-LAST:event_B_MultCalcActionPerformed
 
     private void B_MultLimpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B_MultLimpActionPerformed
-        // TODO add your handling code here:
-        L_MultDobrR.setText("0");
-        L_MultTripR.setText("0");
-        L_MultQuadR.setText("0");
-        L_MultQuinR.setText("0");
+        MultLimp();
         Tf_MultNum.requestFocus();
     }//GEN-LAST:event_B_MultLimpActionPerformed
 
     private void B_MediCalcActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B_MediCalcActionPerformed
-        // TODO add your handling code here:
         double n1 = Double.parseDouble(Tf_MediNum1.getText());
         double n2 = Double.parseDouble(Tf_MediNum2.getText());
         double n3 = Double.parseDouble(Tf_MediNum3.getText());
         double n4 = Double.parseDouble(Tf_MediNum4.getText());
-        double nr=(n1+n2+n3+n4)/4;
-        L_MediMediR.setText(Double.toString(nr));
+        L_MediMediR.setText(decimal.format((n1+n2+n3+n4)/4));
     }//GEN-LAST:event_B_MediCalcActionPerformed
 
     private void B_MediLimpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B_MediLimpActionPerformed
-        // TODO add your handling code here:
-        Tf_MediNum1.setText("0");
-        Tf_MediNum2.setText("0");
-        Tf_MediNum3.setText("0");
-        Tf_MediNum4.setText("0");
-        L_MediMediR.setText("");
+        MediLimp();
         Tf_MediNum1.requestFocus();
     }//GEN-LAST:event_B_MediLimpActionPerformed
 
     private void B_TodoLimpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B_TodoLimpActionPerformed
-        // TODO add your handling code here:
-        Tf_MediNum1.setText("0");
-        Tf_MediNum2.setText("0");
-        Tf_MediNum3.setText("0");
-        Tf_MediNum4.setText("0");
-        L_MediMediR.setText("0");
-        L_MultDobrR.setText("0");
-        L_MultTripR.setText("0");
-        L_MultQuadR.setText("0");
-        L_MultQuinR.setText("0");
-        L_PoteQuadR.setText("0");
-        L_PoteCuboR.setText("0");
-        L_PoteQuarR.setText("0");
-        L_PoteQuinR.setText("0");
-        L_PoteSextR.setText("0");
-        L_PoteRaizR.setText("0");
-        Tf_PoteNum.setText("0");
-        List_TabuList.removeAll();
-        Tf_TabuNum.setText("0");
-        Tf_GrauNum.setText("0");
-        Tf_FatoNum.setText("0");
-        L_FatoResuR.setText("0");
-        L_GrauCossR.setText("0");
-        L_GrauSenoR.setText("0");
-        Tf_MultNum.setText("0");
+        FatoLimp();
+        PoteLimp();
+        TabuLimp();
+        MultLimp();
+        MediLimp();
+        GrauLimp();
     }//GEN-LAST:event_B_TodoLimpActionPerformed
 
     private void B_GrauCalcActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B_GrauCalcActionPerformed
-        // TODO add your handling code here:
         double valor = Double.parseDouble(Tf_GrauNum.getText());
         double grau=valor*Math.PI/180;
-        L_GrauCossR.setText(Double.toString(Math.cos(grau)));        
-        L_GrauSenoR.setText(Double.toString(Math.sin(grau)));
+        L_GrauCossR.setText(decimal.format(Math.cos(grau)));        
+        L_GrauSenoR.setText(decimal.format(Math.sin(grau)));
     }//GEN-LAST:event_B_GrauCalcActionPerformed
 
     private void B_GrauLimpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B_GrauLimpActionPerformed
-        // TODO add your handling code here:
-        L_GrauSenoR.setText("0");
-        L_GrauCossR.setText("0");
-        Tf_GrauNum.setText("");
+        GrauLimp();
         Tf_GrauNum.requestFocus();
     }//GEN-LAST:event_B_GrauLimpActionPerformed
 
     private void B_FatoCalcActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B_FatoCalcActionPerformed
-        // TODO add your handling code here:
         int n1 = Integer.parseInt(Tf_FatoNum.getText());
         int fato = 1;
         for (int contador=1; contador <= n1; contador++){
@@ -904,11 +1007,36 @@ public class Frm_CalcMate extends javax.swing.JFrame {
     }//GEN-LAST:event_B_FatoCalcActionPerformed
 
     private void B_FatoLimpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B_FatoLimpActionPerformed
-        // TODO add your handling code here:
-        L_FatoResuR.setText("0");
-        Tf_FatoNum.setText("");
+        FatoLimp();
         Tf_FatoNum.requestFocus();
     }//GEN-LAST:event_B_FatoLimpActionPerformed
+
+    private void MI_NaveFinaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MI_NaveFinaActionPerformed
+        new Frm_CalcFina().setVisible(true);
+    }//GEN-LAST:event_MI_NaveFinaActionPerformed
+
+    private void MI_NaveEspeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MI_NaveEspeActionPerformed
+        new Frm_CalcEspe().setVisible(true);
+    }//GEN-LAST:event_MI_NaveEspeActionPerformed
+
+    private void MI_NaveSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MI_NaveSairActionPerformed
+        sair();
+    }//GEN-LAST:event_MI_NaveSairActionPerformed
+
+    private void M_SobreMenuKeyTyped(javax.swing.event.MenuKeyEvent evt) {//GEN-FIRST:event_M_SobreMenuKeyTyped
+        new Frm_About().setVisible(true);
+    }//GEN-LAST:event_M_SobreMenuKeyTyped
+
+    private void M_SobreMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_M_SobreMouseClicked
+        new Frm_About().setVisible(true);
+    }//GEN-LAST:event_M_SobreMouseClicked
+
+    private void Tf_KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_Tf_KeyTyped
+        String caracteres = "0987654321";
+        if (!caracteres.contains(evt.getKeyChar()+"")){
+            evt.consume();
+        }
+    }//GEN-LAST:event_Tf_KeyTyped
 
     /**
      * @param args the command line arguments
@@ -998,6 +1126,12 @@ public class Frm_CalcMate extends javax.swing.JFrame {
     private javax.swing.JLabel L_PoteSextR;
     private javax.swing.JLabel L_TabuNum;
     private java.awt.List List_TabuList;
+    private javax.swing.JMenuBar MB_Mate;
+    private javax.swing.JMenuItem MI_NaveEspe;
+    private javax.swing.JMenuItem MI_NaveFina;
+    private javax.swing.JMenuItem MI_NaveSair;
+    private javax.swing.JMenu M_Mate;
+    private javax.swing.JMenu M_Sobre;
     private javax.swing.JPanel P_Fato;
     private javax.swing.JPanel P_Grau;
     private javax.swing.JPanel P_Medi;
