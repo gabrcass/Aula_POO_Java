@@ -29,7 +29,7 @@ public class Frm_CalcMate extends javax.swing.JFrame {
         L_PoteQuinR.setText("0");
         L_PoteSextR.setText("0");
         L_PoteRaizR.setText("0");
-        Tf_PoteNum.setText("0");
+        Tf_PoteNum.setText("");
     }
     
     public void TabuLimp(){
@@ -45,11 +45,11 @@ public class Frm_CalcMate extends javax.swing.JFrame {
     }
     
     public void MediLimp(){
-        Tf_MediNum1.setText("0");
-        Tf_MediNum2.setText("0");
-        Tf_MediNum3.setText("0");
-        Tf_MediNum4.setText("0");
-        L_MediMediR.setText("");
+        Tf_MediNum1.setText("");
+        Tf_MediNum2.setText("");
+        Tf_MediNum3.setText("");
+        Tf_MediNum4.setText("");
+        L_MediMediR.setText("0");
     }
     
     public void GrauLimp(){

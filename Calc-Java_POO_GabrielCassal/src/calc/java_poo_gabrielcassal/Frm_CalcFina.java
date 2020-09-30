@@ -10,9 +10,9 @@ import java.util.Locale;
 import javax.swing.JCheckBox;
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author gabrc
+/*
+ * @author Gabriel Coelho Cassal
+ * Github: github.com/gabrcass/
  */
 public class Frm_CalcFina extends javax.swing.JFrame {
 
