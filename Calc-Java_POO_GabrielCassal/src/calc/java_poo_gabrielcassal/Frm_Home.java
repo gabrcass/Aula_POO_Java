@@ -13,8 +13,11 @@ import javax.swing.JOptionPane;
  */
 public class Frm_Home extends javax.swing.JFrame {
 
-    public void set0(){
-        String.setText("0");
+    public void sair(){
+        int confirma = JOptionPane.showConfirmDialog(this, "Tem certeza ?", "Alerta",JOptionPane.YES_NO_OPTION);
+        if (confirma == 0){
+            System.exit(0);
+        }
     }
     /**
      * Creates new form Frm_Home
@@ -40,6 +43,13 @@ public class Frm_Home extends javax.swing.JFrame {
         Rb_CalcMate = new javax.swing.JRadioButton();
         Rb_CalcFina = new javax.swing.JRadioButton();
         Rb_CalcEspe = new javax.swing.JRadioButton();
+        MB_Home = new javax.swing.JMenuBar();
+        M_Nave = new javax.swing.JMenu();
+        MI_NaveMate = new javax.swing.JMenuItem();
+        MI_NaveFina = new javax.swing.JMenuItem();
+        MI_NaveEspe = new javax.swing.JMenuItem();
+        MI_NaveSair = new javax.swing.JMenuItem();
+        M_Sobre = new javax.swing.JMenu();
 
         setTitle("Tela inicial");
         setName("Tela inicial"); // NOI18N
@@ -112,8 +122,67 @@ public class Frm_Home extends javax.swing.JFrame {
                 .addGroup(Panel_HomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(B_Avan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(B_Sair, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
+
+        M_Nave.setText("Navegar");
+
+        MI_NaveMate.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_M, java.awt.event.InputEvent.SHIFT_MASK | java.awt.event.InputEvent.CTRL_MASK));
+        MI_NaveMate.setText("Cálculos Matemáticos");
+        MI_NaveMate.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MI_NaveMateActionPerformed(evt);
+            }
+        });
+        M_Nave.add(MI_NaveMate);
+
+        MI_NaveFina.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F, java.awt.event.InputEvent.SHIFT_MASK | java.awt.event.InputEvent.CTRL_MASK));
+        MI_NaveFina.setText("Cálculos Financeiros");
+        MI_NaveFina.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MI_NaveFinaActionPerformed(evt);
+            }
+        });
+        M_Nave.add(MI_NaveFina);
+
+        MI_NaveEspe.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_E, java.awt.event.InputEvent.SHIFT_MASK | java.awt.event.InputEvent.CTRL_MASK));
+        MI_NaveEspe.setText("Cálculos Especiais");
+        MI_NaveEspe.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MI_NaveEspeActionPerformed(evt);
+            }
+        });
+        M_Nave.add(MI_NaveEspe);
+
+        MI_NaveSair.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_ESCAPE, 0));
+        MI_NaveSair.setText("Sair");
+        MI_NaveSair.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MI_NaveSairActionPerformed(evt);
+            }
+        });
+        M_Nave.add(MI_NaveSair);
+
+        MB_Home.add(M_Nave);
+
+        M_Sobre.setText("Sobre");
+        M_Sobre.addMenuKeyListener(new javax.swing.event.MenuKeyListener() {
+            public void menuKeyPressed(javax.swing.event.MenuKeyEvent evt) {
+            }
+            public void menuKeyReleased(javax.swing.event.MenuKeyEvent evt) {
+            }
+            public void menuKeyTyped(javax.swing.event.MenuKeyEvent evt) {
+                M_SobreMenuKeyTyped(evt);
+            }
+        });
+        M_Sobre.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                M_SobreMouseClicked(evt);
+            }
+        });
+        MB_Home.add(M_Sobre);
+
+        setJMenuBar(MB_Home);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -149,11 +218,32 @@ public class Frm_Home extends javax.swing.JFrame {
     }//GEN-LAST:event_B_AvanActionPerformed
 
     private void B_SairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B_SairActionPerformed
-        int confirma = JOptionPane.showConfirmDialog(this, "Tem certeza ?", "Alerta",JOptionPane.YES_NO_OPTION);
-        if (confirma == 0){
-            System.exit(0);
-        }
+        sair();
     }//GEN-LAST:event_B_SairActionPerformed
+
+    private void MI_NaveMateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MI_NaveMateActionPerformed
+        new Frm_CalcMate().setVisible(true);
+    }//GEN-LAST:event_MI_NaveMateActionPerformed
+
+    private void MI_NaveFinaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MI_NaveFinaActionPerformed
+        new Frm_CalcFina().setVisible(true);
+    }//GEN-LAST:event_MI_NaveFinaActionPerformed
+
+    private void MI_NaveEspeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MI_NaveEspeActionPerformed
+        new Frm_CalcEspe().setVisible(true);
+    }//GEN-LAST:event_MI_NaveEspeActionPerformed
+
+    private void MI_NaveSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MI_NaveSairActionPerformed
+        sair();
+    }//GEN-LAST:event_MI_NaveSairActionPerformed
+
+    private void M_SobreMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_M_SobreMouseClicked
+        new Frm_About().setVisible(true);
+    }//GEN-LAST:event_M_SobreMouseClicked
+
+    private void M_SobreMenuKeyTyped(javax.swing.event.MenuKeyEvent evt) {//GEN-FIRST:event_M_SobreMenuKeyTyped
+        new Frm_About().setVisible(true);
+    }//GEN-LAST:event_M_SobreMenuKeyTyped
 
     /**
      * @param args the command line arguments
@@ -194,6 +284,13 @@ public class Frm_Home extends javax.swing.JFrame {
     private javax.swing.JButton B_Avan;
     private javax.swing.JButton B_Sair;
     private javax.swing.ButtonGroup GroupRB_Home;
+    private javax.swing.JMenuBar MB_Home;
+    private javax.swing.JMenuItem MI_NaveEspe;
+    private javax.swing.JMenuItem MI_NaveFina;
+    private javax.swing.JMenuItem MI_NaveMate;
+    private javax.swing.JMenuItem MI_NaveSair;
+    private javax.swing.JMenu M_Nave;
+    private javax.swing.JMenu M_Sobre;
     private javax.swing.JPanel Panel_Home;
     private javax.swing.JRadioButton Rb_CalcEspe;
     private javax.swing.JRadioButton Rb_CalcFina;

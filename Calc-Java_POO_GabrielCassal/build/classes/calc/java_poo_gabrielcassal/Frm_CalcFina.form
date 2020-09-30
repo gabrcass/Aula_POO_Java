@@ -42,12 +42,11 @@
                   <Component id="P_Cont" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+              <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
                       <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
                       <Component id="B_Fech" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <Component id="P_Form" min="-2" max="-2" attributes="0"/>
                   <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
                       <Group type="102" attributes="0">
                           <Component id="L_Paga" min="-2" max="-2" attributes="0"/>
@@ -65,6 +64,7 @@
                           <Component id="B_Limp" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
+                  <Component id="P_Form" alignment="0" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="32767" attributes="0"/>
           </Group>
@@ -75,10 +75,7 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <Component id="P_Cont" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
-                  </Group>
+                  <Component id="P_Cont" max="-2" attributes="0"/>
                   <Group type="102" attributes="0">
                       <Component id="P_Form" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -98,9 +95,9 @@
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="B_Fech" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
+              <EmptySpace max="32767" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="B_Sub" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="L_Sub" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
@@ -145,13 +142,9 @@
                               <Component id="Cb_ContL" linkSize="2" alignment="0" min="-2" pref="71" max="-2" attributes="0"/>
                               <Component id="Cb_ContCh" linkSize="2" alignment="0" min="-2" pref="75" max="-2" attributes="0"/>
                               <Component id="Cb_ContJ" linkSize="2" alignment="0" min="-2" pref="77" max="-2" attributes="0"/>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="Cb_ContCs" linkSize="2" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="L_ContPrecCs" linkSize="3" min="-2" pref="62" max="-2" attributes="0"/>
-                              </Group>
+                              <Component id="Cb_ContCs" linkSize="2" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace min="0" pref="70" max="32767" attributes="0"/>
+                          <EmptySpace min="0" pref="76" max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
@@ -184,7 +177,10 @@
                               <Component id="L_ContPrecBe" linkSize="3" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Component id="L_ContPrecCh" linkSize="3" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Component id="L_ContPrecBo" linkSize="3" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="L_ContPrecCr" linkSize="3" alignment="0" max="32767" attributes="0"/>
+                              <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                                  <Component id="L_ContPrecCs" linkSize="3" min="-2" pref="62" max="-2" attributes="0"/>
+                                  <Component id="L_ContPrecCr" linkSize="3" max="32767" attributes="0"/>
+                              </Group>
                           </Group>
                           <EmptySpace max="32767" attributes="0"/>
                       </Group>
@@ -370,6 +366,9 @@
               <Dimension value="[50, 20]"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="Tf_ContKeyTyped"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="L_ContValoCr">
           <Properties>
@@ -402,6 +401,9 @@
               <Dimension value="[50, 20]"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="Tf_ContKeyTyped"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="Tf_ContQuanBl">
           <Properties>
@@ -411,6 +413,9 @@
               <Dimension value="[50, 20]"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="Tf_ContKeyTyped"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="L_ContValoBo">
           <Properties>
@@ -456,6 +461,9 @@
               <Dimension value="[50, 20]"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="Tf_ContKeyTyped"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JCheckBox" name="Cb_ContS">
           <Properties>
@@ -473,6 +481,9 @@
               <Dimension value="[50, 20]"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="Tf_ContKeyTyped"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="L_ContPrecS">
           <Properties>
@@ -582,6 +593,9 @@
               <Dimension value="[50, 20]"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="Tf_ContKeyTyped"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="Tf_ContQuanM">
           <Properties>
@@ -591,6 +605,9 @@
               <Dimension value="[50, 20]"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="Tf_ContKeyTyped"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="Tf_ContQuanL">
           <Properties>
@@ -600,6 +617,9 @@
               <Dimension value="[50, 20]"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="Tf_ContKeyTyped"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="Tf_ContQuanBe">
           <Properties>
@@ -609,6 +629,9 @@
               <Dimension value="[50, 20]"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="Tf_ContKeyTyped"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="Tf_ContQuanCh">
           <Properties>
@@ -618,6 +641,9 @@
               <Dimension value="[50, 20]"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="Tf_ContKeyTyped"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JCheckBox" name="Cb_ContBo">
           <Properties>
@@ -640,6 +666,9 @@
               <Dimension value="[50, 20]"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="Tf_ContKeyTyped"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="L_ContValoCh">
           <Properties>
@@ -667,6 +696,9 @@
               <Dimension value="[50, 20]"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="Tf_ContKeyTyped"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="L_ContValoL">
           <Properties>
@@ -729,18 +761,23 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="Rb_FormVist" alignment="0" max="32767" attributes="0"/>
-                      <Component id="Rb_FormPraz" alignment="0" max="32767" attributes="0"/>
-                      <Component id="L_FormQuan" alignment="0" max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="Rb_FormVist" alignment="0" max="32767" attributes="0"/>
+                              <Component id="Rb_FormPraz" alignment="0" max="32767" attributes="0"/>
+                              <Component id="L_FormQuan" alignment="0" pref="222" max="32767" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Component id="Cb_FormQuan" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="0" pref="45" max="32767" attributes="0"/>
+                      </Group>
                       <Group type="102" attributes="0">
                           <Component id="L_FormValo" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="L_FormValoR" min="-2" pref="88" max="-2" attributes="0"/>
+                          <Component id="L_FormValoR" max="32767" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Component id="Cb_FormQuan" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
