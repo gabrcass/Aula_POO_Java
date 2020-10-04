@@ -238,6 +238,9 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Limpar"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="B_MdcLimpActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="L_MdcResu">
           <Properties>
@@ -447,11 +450,17 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Varificar"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="B_MmcVeriActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="B_MmcLimp">
           <Properties>
             <Property name="text" type="java.lang.String" value="Limpar"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="B_MmcLimpActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>
@@ -660,7 +669,7 @@
         </Component>
         <Component class="javax.swing.JTextField" name="Tf_BhasNum1">
           <Events>
-            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="Tf_KeyTyped"/>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="Tf_KeyTyped_2"/>
           </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="L_BhasNum2">
@@ -670,7 +679,7 @@
         </Component>
         <Component class="javax.swing.JTextField" name="Tf_BhasNum2">
           <Events>
-            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="Tf_KeyTyped"/>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="Tf_KeyTyped_2"/>
           </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="L_BhasNum3">
@@ -680,7 +689,7 @@
         </Component>
         <Component class="javax.swing.JTextField" name="Tf_BhasNum3">
           <Events>
-            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="Tf_KeyTyped"/>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="Tf_KeyTyped_2"/>
           </Events>
         </Component>
         <Component class="javax.swing.JButton" name="B_BhasVeri">
@@ -695,6 +704,9 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Limpar"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="B_BhasLimpActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="L_BhasResu">
           <Properties>

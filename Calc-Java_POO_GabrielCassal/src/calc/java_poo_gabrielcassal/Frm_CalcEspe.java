@@ -5,6 +5,7 @@
  */
 package calc.java_poo_gabrielcassal;
 
+import com.sun.corba.se.impl.encoding.CDRInputStream_1_0;
 import java.text.DecimalFormat;
 import javax.swing.JOptionPane;
 
@@ -14,6 +15,18 @@ import javax.swing.JOptionPane;
  */
 public class Frm_CalcEspe extends javax.swing.JFrame {
 
+    DecimalFormat decimal = new DecimalFormat("#0.00");
+
+    public static int mdc(int num1, int num2){
+            while (num2 != 0) {
+            int numR = num1 % num2;
+            num1 = num2;
+            num2 = numR;
+        }
+            return num1;
+    }
+    
+        
     public void sair(){
         int confirma = JOptionPane.showConfirmDialog(this, "Tem certeza ?", "Alerta",JOptionPane.YES_NO_OPTION);
         if (confirma == 0){
@@ -21,7 +34,39 @@ public class Frm_CalcEspe extends javax.swing.JFrame {
         }
     }
     
-    DecimalFormat decimal = new DecimalFormat("#0.00");
+    public void BhasLimp(){
+        L_BhasDeltR.setText("0");
+        L_BhasX1R.setText("0");
+        L_BhasX2R.setText("0");
+        Tf_BhasNum1.setText("");
+        Tf_BhasNum2.setText("");
+        Tf_BhasNum3.setText("");
+    }
+    
+    public void MdcLimp(){
+        Tf_MdcNum1.setText("");
+        Tf_MdcNum2.setText("");
+        L_MdcResuR.setText("0");
+    }
+    
+    public void MmcLimp(){
+        Tf_MmcNum1.setText("");
+        Tf_MmcNum2.setText("");
+        L_MmcResuR.setText("0");
+    }
+    
+    public void PrimLimp(){
+        L_PrimResu.setText("...");
+        Tf_PrimNum.setText("");
+    }
+    
+    public void ParLimp(){
+        L_ParResuR.setText("");
+        L_ParResu.setText("Resultado :");
+        Tf_ParNum.setText("");
+    }
+    
+    
     
     /**
      * Creates new form Frm_CalcEspe
@@ -124,6 +169,11 @@ public class Frm_CalcEspe extends javax.swing.JFrame {
         });
 
         B_MdcLimp.setText("Limpar");
+        B_MdcLimp.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                B_MdcLimpActionPerformed(evt);
+            }
+        });
 
         L_MdcResu.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         L_MdcResu.setText("Resultado :");
@@ -262,8 +312,18 @@ public class Frm_CalcEspe extends javax.swing.JFrame {
         L_MmcResuR.setText("0");
 
         B_MmcVeri.setText("Varificar");
+        B_MmcVeri.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                B_MmcVeriActionPerformed(evt);
+            }
+        });
 
         B_MmcLimp.setText("Limpar");
+        B_MmcLimp.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                B_MmcLimpActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout P_MmcLayout = new javax.swing.GroupLayout(P_Mmc);
         P_Mmc.setLayout(P_MmcLayout);
@@ -382,7 +442,7 @@ public class Frm_CalcEspe extends javax.swing.JFrame {
 
         Tf_BhasNum1.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
-                Tf_KeyTyped(evt);
+                Tf_KeyTyped_2(evt);
             }
         });
 
@@ -390,7 +450,7 @@ public class Frm_CalcEspe extends javax.swing.JFrame {
 
         Tf_BhasNum2.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
-                Tf_KeyTyped(evt);
+                Tf_KeyTyped_2(evt);
             }
         });
 
@@ -398,7 +458,7 @@ public class Frm_CalcEspe extends javax.swing.JFrame {
 
         Tf_BhasNum3.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
-                Tf_KeyTyped(evt);
+                Tf_KeyTyped_2(evt);
             }
         });
 
@@ -410,6 +470,11 @@ public class Frm_CalcEspe extends javax.swing.JFrame {
         });
 
         B_BhasLimp.setText("Limpar");
+        B_BhasLimp.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                B_BhasLimpActionPerformed(evt);
+            }
+        });
 
         L_BhasResu.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         L_BhasResu.setText("Resultado :");
@@ -630,10 +695,7 @@ public class Frm_CalcEspe extends javax.swing.JFrame {
     }//GEN-LAST:event_B_ParVeriActionPerformed
 
     private void B_ParLimpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B_ParLimpActionPerformed
-        // TODO add your handling code here:
-        L_ParResuR.setText("");
-        L_ParResu.setText("Resultado :");
-        Tf_ParNum.setText("");
+        ParLimp();
         Tf_ParNum.requestFocus();
     }//GEN-LAST:event_B_ParLimpActionPerformed
 
@@ -661,18 +723,14 @@ public class Frm_CalcEspe extends javax.swing.JFrame {
     }//GEN-LAST:event_B_PrimVeriActionPerformed
 
     private void B_PrimLimpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B_PrimLimpActionPerformed
-        L_PrimResu.setText("...");
-        Tf_PrimNum.setText("");
+        PrimLimp();
         Tf_PrimNum.requestFocus();
     }//GEN-LAST:event_B_PrimLimpActionPerformed
 
     private void B_MdcVeriActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B_MdcVeriActionPerformed
         int num1 = Integer.parseInt(Tf_MdcNum1.getText());
         int num2 = Integer.parseInt(Tf_MdcNum2.getText());
-        int rest;
-        
-        
-        
+        L_MdcResuR.setText(decimal.format(mdc(num1, num2)));
     }//GEN-LAST:event_B_MdcVeriActionPerformed
 
     private void B_BhasVeriActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B_BhasVeriActionPerformed
@@ -698,11 +756,11 @@ public class Frm_CalcEspe extends javax.swing.JFrame {
     }//GEN-LAST:event_B_FechActionPerformed
 
     private void B_LimpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B_LimpActionPerformed
-        // TODO add your handling code here:
-        Tf_MdcNum1.setText("");
-        Tf_MdcNum2.setText("");
-        L_MdcResuR.setText("0");
-        
+        BhasLimp();
+        MdcLimp();
+        PrimLimp();
+        MmcLimp();
+        ParLimp();
     }//GEN-LAST:event_B_LimpActionPerformed
 
     private void MI_NaveMateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MI_NaveMateActionPerformed
@@ -731,6 +789,35 @@ public class Frm_CalcEspe extends javax.swing.JFrame {
             evt.consume();
         }
     }//GEN-LAST:event_Tf_KeyTyped
+
+    private void B_BhasLimpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B_BhasLimpActionPerformed
+        BhasLimp();
+        Tf_BhasNum1.requestFocus();
+    }//GEN-LAST:event_B_BhasLimpActionPerformed
+
+    private void B_MmcLimpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B_MmcLimpActionPerformed
+        MmcLimp();
+        Tf_MmcNum1.requestFocus();
+    }//GEN-LAST:event_B_MmcLimpActionPerformed
+
+    private void B_MdcLimpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B_MdcLimpActionPerformed
+        MdcLimp();
+        Tf_MdcNum1.requestFocus();
+    }//GEN-LAST:event_B_MdcLimpActionPerformed
+
+    private void Tf_KeyTyped_2(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_Tf_KeyTyped_2
+        String caracteres = "0987654321-";
+        if (!caracteres.contains(evt.getKeyChar()+"")){
+            evt.consume();
+        }
+    }//GEN-LAST:event_Tf_KeyTyped_2
+
+    private void B_MmcVeriActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B_MmcVeriActionPerformed
+        int num1 = Integer.parseInt(Tf_MmcNum1.getText());
+        int num2 = Integer.parseInt(Tf_MmcNum2.getText());
+        int numR = num1 * (num2 / mdc(num1, num2));
+        L_MmcResuR.setText(decimal.format(numR));
+    }//GEN-LAST:event_B_MmcVeriActionPerformed
 
     /**
      * @param args the command line arguments
